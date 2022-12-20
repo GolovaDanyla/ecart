@@ -2,7 +2,7 @@
     <div class="container d-flex">
         <div class="items">
             <a>
-                <img src="/assets/1.png">
+                <img src="/assets/cart.png">
                 <h6>Всі товари</h6>
             </a>
         </div>
@@ -14,13 +14,13 @@
         </div>
         <div class="items">
             <a>
-                <img src="/assets/4.png">
+                <img src="/assets/22.png">
                 <h6>Одяг</h6>
             </a>
         </div>
         <div class="items">
             <a>
-                <img src="/assets/5.png">
+                <img src="/assets/gift.png">
                 <h6>Подарунки</h6>
             </a>
         </div>
@@ -32,10 +32,10 @@
         <ng-container *ngFor="let item of productList">
 
             <div class="card col-md-3">
-                <img src="{{item.image}}" alt="">
+                <img src="{{item.image}}" alt="" routerLink="/lot">
                 <h5 class="itemdata">{{item.title}}</h5>
                 <p class="itemdata">{{item.description}}</p>
-                <p><strong>Ціна:</strong>${{item.price}}</p>
+                <p><strong>Ціна:</strong> {{item.price}} грн.</p>
                 <p>{{item.category}}</p>
                 
                 <button class="btn btn-dark" (click)="addToCart(item)">

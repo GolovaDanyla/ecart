@@ -1,16 +1,20 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
-
+import { map, Observable } from 'rxjs';
+import data from '../../assets/myProducts.json';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
+  
   getProduct() {
-    return this.http.get("https://fakestoreapi.com/products").pipe(map((res: any) => {
-      return res;
-    }))
+    return new Observable<any>(observe => {
+      observe.next(data)
+    })
+    // return this.http.get("https://fakestoreapi.com/products").pipe(map((res: any) => {
+    //   return data;
+    // }))
   }
 }

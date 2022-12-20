@@ -1,0 +1,42 @@
+[{
+    "id": 0,
+    "title": "Ліхтар",
+    "price": 1200,
+    "description": "Авариіний світлодіодний ліхтар на 60LED",
+    "category": "Електроніка",
+    "image": "/assets/р.jpg",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 1200
+},
+{
+    "id": 1,
+    "title": "Три лампи з пультом",
+    "price": 600,
+    "description": "Авариіний світлодіодний ліхтар на 3 лампи",
+    "category": "Електроніка",
+    "image": "/assets/ккк.jpg",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 600
+},
+{
+    "id": 2,
+    "title": "Керасиновий обігрівач",
+    "price": 5999,
+    "description": "Авариіний світлодіодний ліхтар на 3 лампи",
+    "category": "Обігрівачі",
+    "image": "/assets/rrr.jpg",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 5999
+}]

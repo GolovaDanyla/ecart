@@ -10,7 +10,6 @@
                             <th>Фото товару</th>
                             <th>Ціна</th>
                             <th>Опис</th>
-                            <th>Кількість</th>
                             <th>Дія</th>
                         </tr>
                     </thead>
@@ -19,18 +18,17 @@
                             <td>{{i + 1}}</td>
                             <td>{{item.title}}</td>
                             <td><img src="{{item.image}}" alt="" style="width:120px;"></td>
-                            <td>{{item.price}}$</td>
+                            <td> {{item.price}} грн.</td>
                             <td>{{item.description}}</td>
-                            <td>{{item.total}}</td>
-                            <td><button (click)="removeProduct(item)" class="btn btn-danger"><i
-                                        class="fas fa-trash"></i></button></td>
+                            <td><button (click)="removeProduct(item)"
+                                    class="btn btn-danger"><mat-icon>delete</mat-icon></button></td>
                         </tr>
                         <tr>
-                            <!-- <td colspan="4"></td> -->
+                            <td colspan="4"></td>
                             <td><button (click)="removeAllProduct()" class="btn btn-danger">Очистити</button></td>
                             <td><button routerLink="/products" class="btn btn-warning">Купити ще</button></td>
-                            <td><button class="btn btn-success">Перевірити</button></td>
-                            <td><strong>Всього: ${{allProducts}}</strong></td>
+                            <td><button class="btn btn-success">Придбати зараз</button></td>
+                            <td><strong>Всього: ₴{{allProducts}}</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -46,7 +44,7 @@
             <h4 class="card-title">Мій кошик</h4>
         </div>
         <div class="center">
-            <img src="/assets/3.png" alt="">
+            <img src="/assets/empty.png" alt="">
             <h5>Ваш кошик пустий</h5>
             <!-- <h6>Добавити зараз</h6> -->
             <button routerLink="/products" class="btn btn-dark">Купити зараз</button>
