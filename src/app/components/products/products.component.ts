@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from 'src/app/services/api.service';
 import { CartapiService } from 'src/app/services/cartapi.service';
 
@@ -11,7 +12,8 @@ export class ProductsComponent {
   productList: any;
   constructor(
     private api: ApiService,
-    private cartApi: CartapiService) {
+    private cartApi: CartapiService,
+    private snackBar: MatSnackBar) {
 
   }
   ngOnInit(): void {
@@ -24,6 +26,7 @@ export class ProductsComponent {
   }
   addToCart(item: any) {
 this.cartApi.addToCart(item);
+let snackBarRef = this.snackBar.open(`Ви додали у кошик - ${item.title}`, '', {duration: 1500});
   }
 
 }
