@@ -21,12 +21,12 @@
                             <td> {{item.price}} грн.</td>
                             <td>{{item.description}}</td>
                             <td><button (click)="removeProduct(item)"
-                                    class="btn btn-danger"><mat-icon>delete</mat-icon></button></td>
+                                    class="btn btn-dark"><mat-icon>delete</mat-icon></button></td>
                         </tr>
                         <tr>
-                            <td colspan="4"></td>
-                            <td><button (click)="removeAllProduct()" class="btn btn-danger">Очистити</button></td>
-                            <td><button routerLink="/products" class="btn btn-warning">Купити ще</button></td>
+                            <!-- <td colspan="4"></td> -->
+                            <td><button (click)="removeAllProduct()" class="btn btn-dark">Очистити</button></td>
+                            <td><button routerLink="/products" class="btn btn-dark">Купити ще</button></td>
                             <td><button class="btn btn-success">Придбати зараз</button></td>
                             <td><strong>Всього: ₴{{allProducts}}</strong></td>
                         </tr>

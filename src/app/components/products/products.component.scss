@@ -2,17 +2,18 @@
     display: flex;
     min-width: 0;
     word-wrap: break-word;
-    background-color: antiquewhite;
+    background-color: white;
     background-clip: border-box;
     position: relative;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: .25rem;
+    // border: 1px solid black;
+    // border-radius: .25rem;
 }
 
 .items {
     margin: 0px 15px;
     text-align: center;
+  
     
 }
 
@@ -21,8 +22,9 @@
     
 }
 
-.items a:hover {
-    color: blue;
+.items img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.5)
 }
 
 .itemdata {
@@ -38,7 +40,7 @@
 }
 .card img{
     width: 15vw;
-    height: 20vh;
+    height: 35vh;
     margin-bottom: 15px;
     transition: 0.3s ease-in-out;
 }

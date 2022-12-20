@@ -4,7 +4,7 @@
     "price": 1200,
     "description": "Авариіний світлодіодний ліхтар на 60LED",
     "category": "Електроніка",
-    "image": "/assets/р.jpg",
+    "image": "/assets/р.png",
     "rating": {
         "rate": 4.7,
         "count": 500
@@ -18,7 +18,7 @@
     "price": 600,
     "description": "Авариіний світлодіодний ліхтар на 3 лампи",
     "category": "Електроніка",
-    "image": "/assets/ккк.jpg",
+    "image": "/assets/ккк.png",
     "rating": {
         "rate": 4.7,
         "count": 500
@@ -32,11 +32,67 @@
     "price": 5999,
     "description": "Авариіний світлодіодний ліхтар на 3 лампи",
     "category": "Обігрівачі",
-    "image": "/assets/rrr.jpg",
+    "image": "/assets/cerosin.png",
     "rating": {
         "rate": 4.7,
         "count": 500
     },
     "quantity": 1,
     "total": 5999
+},
+{
+    "id": 3,
+    "title": "Акумуляторний ліхтар",
+    "price": 1200,
+    "description": "Авариіний світлодіодний ліхтар 60LED",
+    "category": "Електроніка",
+    "image": "/assets/м.jpg",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 1200
+},
+{
+    "id": 4,
+    "title": "Прожектор акумуляторний",
+    "price": 1200,
+    "description": "Прожектор акумуляторний з повербанком",
+    "category": "Одяг",
+    "image": "/assets/prod.png",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 1200
+},
+{
+    "id": 5,
+    "title": "Smart Watch",
+    "price": 2000,
+    "description": "Smart Watch унісекс",
+    "category": "Електроніка",
+    "image": "/assets/clock.png",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 2000
+},
+{
+    "id": 6,
+    "title": "Плита газова",
+    "price": 1800,
+    "description": "Плита газова на балоні К-202",
+    "category": "Обігрівачі",
+    "image": "/assets/fire.png",
+    "rating": {
+        "rate": 4.7,
+        "count": 500
+    },
+    "quantity": 1,
+    "total": 1800
 }]

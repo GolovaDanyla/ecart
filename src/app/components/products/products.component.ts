@@ -25,8 +25,8 @@ export class ProductsComponent {
     })
   }
   addToCart(item: any) {
-this.cartApi.addToCart(item);
-let snackBarRef = this.snackBar.open(`Ви додали у кошик - ${item.title}`, '', {duration: 1500});
+    this.cartApi.addToCart(item);
+    let snackBarRef = this.snackBar.open(`Ви додали у кошик - ${item.title}`, '', { duration: 1500 });
   }
 
 }
