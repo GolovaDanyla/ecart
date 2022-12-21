@@ -1,14 +1,26 @@
-<h2 style="text-align: center;">Ліхтар</h2>
+<mat-card>
 
+  <mat-card-content>
 
-<div class="container" style="display: flex; flex-direction: row;">
-    <img src="./assets/fire.png" alt="" style="width: 200px; height: 200px;">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam dolor accusamus praesentium fuga non?
-        Exercitationem explicabo adipisci voluptatibus odit aliquam, excepturi odio non autem quae commodi nobis dolore
-        quaerat.</p>
-        
+    <div
+      class="container"
+      style="display: flex; flex-direction: row;">
+      <img
+        [src]="productItem.image"
+        alt
+        style="width: 200px; height: 200px;">
+      <div>
+        <h2 style="text-align: center;">{{productItem.title}}</h2>
+        <p>{{productItem.description}}</p>
+      </div>
+
     </div>
-    <button class="btn btn-dark">
-        Додати у кошик
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button
+      class="btn btn-dark"
+      (click)="addToCart(productItem)">
+      Додати у кошик
     </button>
-    
+  </mat-card-actions>
+</mat-card>
