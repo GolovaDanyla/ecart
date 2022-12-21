@@ -1,53 +1,97 @@
 <ng-container *ngIf="products.length !=0">
-    <div class="container">
-        <div class="card-table">
-            <div class="card-product">
-                <table class="table table-responsive">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Назва товару</th>
-                            <th>Фото товару</th>
-                            <th>Ціна</th>
-                            <th>Опис</th>
-                            <th>Дія</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of products, let i = index">
-                            <td>{{i + 1}}</td>
-                            <td>{{item.title}}</td>
-                            <td><img src="{{item.image}}" alt="" style="width:120px;"></td>
-                            <td> {{item.price}} грн.</td>
-                            <td>{{item.description}}</td>
-                            <td><button (click)="removeProduct(item)"
-                                    class="btn btn-dark"><mat-icon>delete</mat-icon></button></td>
-                        </tr>
-                        <tr>
-                            <!-- <td colspan="4"></td> -->
-                            <td><button (click)="removeAllProduct()" class="btn btn-dark">Очистити</button></td>
-                            <td><button routerLink="/products" class="btn btn-dark">Купити ще</button></td>
-                            <td><button class="btn btn-success">Придбати зараз</button></td>
-                            <td><strong>Всього: ₴{{allProducts}}</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <div class="container">
+    <div class="card-table">
+      <div class="card-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Назва товару</th>
+              <th>Фото товару</th>
+              <th>Ціна</th>
+              <th>Опис</th>
+              <th>Дія</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products, let i = index">
+              <td>{{i + 1}}</td>
+              <td>{{item.title}}</td>
+              <td>
+                <img
+                  src="{{item.image}}"
+                  alt
+                  style="width:80px; height: 80px;">
+              </td>
+              <td>{{item.price}} грн.</td>
+              <td>{{item.description}}</td>
+              <td>
+                <form style="display: flex;">
+                  <mat-form-field style="width: 100px">
+                    <mat-label>Kiлькiсть</mat-label>
+                    <input
+                      matInput
+                      type="number"
+                      value="1"
+                      min="256">
+                  </mat-form-field>
+
+                  <button
+                    mat-button
+                    (click)="removeProduct(item)"
+                    class="btn btn-dark">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <!-- <td colspan="4"></td> -->
+              <td>
+                <button
+                  (click)="removeAllProduct()"
+                  class="btn btn-dark">
+                  Очистити
+                </button>
+              </td>
+              <td>
+                <button
+                  routerLink="/products"
+                  class="btn btn-dark">
+                  Купити ще
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-success">Придбати зараз</button>
+              </td>
+              <td>
+                <strong>Всього: ₴{{allProducts}}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 </ng-container>
 
 <ng-container *ngIf="products.length == 0">
 
-    <div class="container">
-        <div class="card">
-            <h4 class="card-title">Мій кошик</h4>
-        </div>
-        <div class="center">
-            <img src="/assets/empty.png" alt="">
-            <h5>Ваш кошик пустий</h5>
-            <!-- <h6>Добавити зараз</h6> -->
-            <button routerLink="/products" class="btn btn-dark">Купити зараз</button>
-        </div>
+  <div class="container">
+    <div class="card">
+      <h4 class="card-title">Мій кошик</h4>
     </div>
+    <div class="center">
+      <img
+        src="/assets/empty.png"
+        alt>
+      <h5>Ваш кошик пустий</h5>
+      <!-- <h6>Добавити зараз</h6> -->
+      <button
+        routerLink="/products"
+        class="btn btn-dark">
+        Купити зараз
+      </button>
+    </div>
+  </div>
 </ng-container>
