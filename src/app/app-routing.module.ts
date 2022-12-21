@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'products', pathMatch: 'full' },
   { path: 'products', component: ProductsComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'lot', component: LotComponent }
+  { path: 'lot', component: LotComponent },
+  { path: 'lot/:id', component: LotComponent },
 ];
 
 @NgModule({

@@ -29,10 +29,10 @@
 
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of productList">
+        <ng-container *ngFor="let item of productList; let idx = index">
 
             <div class="card col-md-3">
-                <img src="{{item.image}}" alt="" routerLink="/lot">
+                <img src="{{item.image}}" alt="" [routerLink]="'/lot/' + idx">
                 <h5 class="itemdata">{{item.title}}</h5>
                 <p class="itemdata">{{item.description}}</p>
                 <p><strong>Ціна:</strong> {{item.price}} грн.</p>
