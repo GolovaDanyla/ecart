@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CartapiService } from 'src/app/services/cartapi.service';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DialogAnimationsExampleDialog } from '../buy/buy.component';
 
 
 
@@ -12,30 +13,37 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 
 export class CartComponent {
-products: any = [];
-allProducts: any = 0;
-constructor(
-  private cartApi: CartapiService,
-  private snackBar: MatSnackBar
-  ){
+  products: any = [];
+  allProducts: any = 0;
+  constructor(
+    private cartApi: CartapiService,
+    private snackBar: MatSnackBar,
+    public dialog: MatDialog
+  ) {
+    
+  }
 
-}
+  ngOnInit(): void {
+    this.cartApi.getProductData().subscribe(res => {
+      this.products = res;
+      this.allProducts = this.cartApi.getTotalAmount();
+    })
 
+  }
+  openDialog(): void {
+    this.dialog.open(DialogAnimationsExampleDialog, {
+      // width: '500px'
 
-ngOnInit(): void {
-this.cartApi.getProductData().subscribe(res => {
-  this.products = res;
-  this.allProducts = this.cartApi.getTotalAmount();
-})
-  
-}
-removeProduct(item:any){
-this.cartApi.removeCartData(item);
-}
-removeAllProduct(){
-  this.cartApi.removeAllCart();
-}
-buyNow(){
-  let snackBarRef = this.snackBar.open("Ви придбали цю хуйню", '', { duration: 1500 });
-}
+    });
+  }
+  removeProduct(item: any) {
+    this.cartApi.removeCartData(item);
+  }
+  removeAllProduct() {
+    this.cartApi.removeAllCart();
+  }
+  buyNow() {
+    this.openDialog();
+    // let snackBarRef = this.snackBar.open("Ви придбали цю хуйню", '', { duration: 1500 });
+  }
 }

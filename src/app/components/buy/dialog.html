@@ -1,0 +1,25 @@
+<div style="padding: 2rem;">
+
+    <form class="example-form" style="display: flex; flex-direction: column;">
+        <mat-form-field class="example-full-width">
+            <mat-label>Ваше Ім'я та Прізвище</mat-label>
+            <input type="text" matInput placeholder="Ім'я/Прізвище">
+          </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Телефон</mat-label>
+          <span matPrefix>+38 &nbsp;</span>
+          <input type="tel" matInput placeholder="099-999-9999">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>№ відділеня, куди доставляти </mat-label>
+            <input type="text" matInput placeholder="№ відділеня">
+          </mat-form-field>
+        <mat-radio-group aria-label="Як Вам доставити покупку?">
+            <mat-radio-button value="1">Нова пошта </mat-radio-button>
+            <mat-radio-button value="2">MeestExpress</mat-radio-button>
+            <mat-radio-button value="3">Самовивіз(Одеса)</mat-radio-button>
+          </mat-radio-group>
+        <button class="btn btn-success" (click)="buy()">Купити зараз!</button>
+      </form>
+      
+</div>

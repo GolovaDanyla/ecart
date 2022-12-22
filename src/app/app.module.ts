@@ -17,8 +17,11 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { BuyComponent } from './components/buy/buy.component';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { BuyComponent, DialogAnimationsExampleDialog } from './components/buy/buy.component';
+import {MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
+
+
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
     CartComponent,
     FooterComponent,
     LotComponent,
-    BuyComponent
+    BuyComponent,
+    DialogAnimationsExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,8 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
+    MatRadioModule
     
   ],
   providers: [],
