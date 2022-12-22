@@ -10,6 +10,7 @@
               <th>Фото товару</th>
               <th>Ціна</th>
               <th>Опис</th>
+              <th>Кількість</th>
               <th>Дія</th>
             </tr>
           </thead>
@@ -18,51 +19,33 @@
               <td>{{i + 1}}</td>
               <td>{{item.title}}</td>
               <td>
-                <img
-                  src="{{item.image}}"
-                  alt
-                  style="width:80px; height: 80px;">
+                <img src="{{item.image}}" alt style="width:80px; height: 80px;">
               </td>
               <td>{{item.price}} грн.</td>
               <td>{{item.description}}</td>
+              <td>1</td>
               <td>
                 <form style="display: flex;">
-                  <mat-form-field style="width: 100px">
-                    <mat-label>Kiлькiсть</mat-label>
-                    <input
-                      matInput
-                      type="number"
-                      value="1"
-                      min="256">
-                  </mat-form-field>
-
-                  <button
-                    mat-button
-                    (click)="removeProduct(item)"
-                    class="btn btn-dark">
+                  <button mat-button (click)="removeProduct(item)" class="btn btn-dark">
                     <mat-icon>delete</mat-icon>
                   </button>
                 </form>
               </td>
             </tr>
             <tr>
-              <!-- <td colspan="4"></td> -->
+              <!-- <td colspan=""></td> -->
               <td>
-                <button
-                  (click)="removeAllProduct()"
-                  class="btn btn-dark">
+                <button (click)="removeAllProduct()" class="btn btn-dark">
                   Очистити
                 </button>
               </td>
               <td>
-                <button
-                  routerLink="/products"
-                  class="btn btn-dark">
+                <button routerLink="/products" class="btn btn-dark">
                   Купити ще
                 </button>
               </td>
               <td>
-                <button class="btn btn-success">Придбати зараз</button>
+                <button class="btn btn-success" (click)="buyNow()">Придбати зараз</button>
               </td>
               <td>
                 <strong>Всього: ₴{{allProducts}}</strong>
@@ -82,14 +65,10 @@
       <h4 class="card-title">Мій кошик</h4>
     </div>
     <div class="center">
-      <img
-        src="/assets/empty.png"
-        alt>
+      <img src="/assets/empty.png" alt>
       <h5>Ваш кошик пустий</h5>
       <!-- <h6>Добавити зараз</h6> -->
-      <button
-        routerLink="/products"
-        class="btn btn-dark">
+      <button routerLink="/products" class="btn btn-dark">
         Купити зараз
       </button>
     </div>

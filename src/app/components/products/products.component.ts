@@ -28,5 +28,4 @@ export class ProductsComponent {
     this.cartApi.addToCart(item);
     let snackBarRef = this.snackBar.open(`Ви додали у кошик - ${item.title}`, '', { duration: 1500 });
   }
-
 }

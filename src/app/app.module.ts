@@ -17,6 +17,9 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BuyComponent } from './components/buy/buy.component';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ProductsComponent,
     CartComponent,
     FooterComponent,
-    LotComponent
+    LotComponent,
+    BuyComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
