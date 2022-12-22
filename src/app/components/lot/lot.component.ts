@@ -11,6 +11,7 @@ import { CartapiService } from 'src/app/services/cartapi.service';
 })
 export class LotComponent {
   productItem: any;
+  totalItemNumber: number = 0;
   constructor(
     private api: ApiService,
     private cartApi: CartapiService,
@@ -28,6 +29,9 @@ export class LotComponent {
       });
   }
   ngOnInit(): void {
+    this.cartApi.getProductData().subscribe(res => {
+      this.totalItemNumber = res.length;
+    })
     // this.api.getProduct().subscribe(res => {
     //   this.productList = res;
     //   this.productList.forEach((a: any) => {

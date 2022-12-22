@@ -1,8 +1,22 @@
+<mat-toolbar class="toolbar">
+  <mat-icon style="font-size: 30px; color: white">store</mat-icon> &nbsp; &nbsp;
+  <strong style="font-size: 40px; color: white" routerLink="/products">Podlivka store</strong>  &nbsp; &nbsp;
+
+  <div class="number">
+
+      <h4>+38(066)-842-03-91</h4>
+      <h4>+38(050)-074-03-11</h4>
+  </div>
+  
+
+<button routerLink="/cart" class="btn btn-dark">
+  <mat-icon>shopping_cart</mat-icon>
+  <div class="badge bg-danger">{{totalItemNumber}}</div>
+</button>
+</mat-toolbar>
 <ng-container *ngIf="products.length !=0">
-  <div class="container">
-    <div class="card-table">
-      <div class="card-product">
-        <table class="table table-responsive">
+ 
+        <table >
           <thead>
             <tr>
               <th>№</th>
@@ -54,18 +68,15 @@
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </div>
+     
 </ng-container>
 
 <ng-container *ngIf="products.length == 0">
 
-  <div class="container">
-    <div class="card">
-      <h4 class="card-title">Мій кошик</h4>
-    </div>
-    <div class="center">
+ 
+      <h4>Мій кошик</h4>
+    
+    <div>
       <img src="/assets/empty.png" alt>
       <h5>Ваш кошик пустий</h5>
       <!-- <h6>Добавити зараз</h6> -->
@@ -73,5 +84,5 @@
         Купити зараз
       </button>
     </div>
-  </div>
+  
 </ng-container>

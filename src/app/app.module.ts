@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';;
 import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -20,6 +19,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BuyComponent, DialogAnimationsExampleDialog } from './components/buy/buy.component';
 import {MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+
 
 
 
@@ -27,7 +30,6 @@ import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     ProductsComponent,
     CartComponent,
     FooterComponent,
@@ -49,7 +51,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableModule,
+    MatToolbarModule
     
   ],
   providers: [],

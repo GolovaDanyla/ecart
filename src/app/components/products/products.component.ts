@@ -12,6 +12,7 @@ import { CartapiService } from 'src/app/services/cartapi.service';
 export class ProductsComponent {
   productList: any;
   categoryId: string = '';
+  totalItemNumber: number = 0;
 
   constructor(
     private api: ApiService,
@@ -23,7 +24,7 @@ export class ProductsComponent {
       console.log({ params });
       const category = params['category'];
       this.categoryId = category;
-      
+
       this.api.getProduct().subscribe(res => {
         this.productList = res;
         if (this.categoryId) {
@@ -39,6 +40,9 @@ export class ProductsComponent {
 
   }
   ngOnInit(): void {
+    this.cartApi.getProductData().subscribe(res => {
+    this.totalItemNumber = res.length;
+  })
    
   }
   addToCart(item: any) {

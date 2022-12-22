@@ -15,6 +15,7 @@ import { DialogAnimationsExampleDialog } from '../buy/buy.component';
 export class CartComponent {
   products: any = [];
   allProducts: any = 0;
+  totalItemNumber: number = 0;
   constructor(
     private cartApi: CartapiService,
     private snackBar: MatSnackBar,
@@ -27,6 +28,9 @@ export class CartComponent {
     this.cartApi.getProductData().subscribe(res => {
       this.products = res;
       this.allProducts = this.cartApi.getTotalAmount();
+    })
+    this.cartApi.getProductData().subscribe(res => {
+      this.totalItemNumber = res.length;
     })
 
   }

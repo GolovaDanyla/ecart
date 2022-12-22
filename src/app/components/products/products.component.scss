@@ -1,28 +1,32 @@
-.cart-top {
+.first {
     display: flex;
-    min-width: 0;
-    word-wrap: break-word;
+    flex-direction: row;
     background-color: white;
-    background-clip: border-box;
-    position: relative;
-    flex-direction: column;
+    // background-clip: border-box;
+    // position: relative;
+    // flex-direction: column;
     // border: 1px solid black;
     // border-radius: .25rem;
 }
 
-.items {
+.choose {
     margin: 0px 15px;
     text-align: center;
+    color: black;
   
     
 }
+.choose button{
+    border: 0px;
+    background-color: white;
+}
 
-.items img {
+.choose img {
     width: 65px;
     
 }
 
-.items img:hover {
+img:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.5)
 }
@@ -47,4 +51,16 @@
 .card img:hover{
     transition: 0.3s ease-in-out;
     transform: scale(1.1)
+}
+.number {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-top: 13px;
+}
+.toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
 }
