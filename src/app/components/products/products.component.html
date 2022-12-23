@@ -1,23 +1,26 @@
 <mat-toolbar class="toolbar">
-    <mat-icon style="font-size: 30px; color: white">store</mat-icon>
-    <strong style="font-size: 40px; color: white" routerLink="/products">Podlivka store</strong>
+    <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
 
-    <div class="number">
+    <!-- <div class="number">
+        <div>
+            <h4>+38(066)-842-03-91</h4>
 
-        <h4>+38(066)-842-03-91</h4>
-        <h4>+38(050)-074-03-11</h4>
-    </div>
+        </div>
+        <div>
 
+            <h4>+38(050)-074-03-11</h4>
+        </div>
 
-    <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
+    </div> -->
+    <span style="flex: 1 1 auto;"></span>
+
+    <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent" style="margin-right: 10px;">
         <mat-icon>shopping_cart</mat-icon>
         <div>{{totalItemNumber}}</div>
     </button>
 </mat-toolbar>
 
 <div class="first">
-
-
     <button routerLink="/products">
         <img src="/assets/cart1.png">
         <h6>Всі товари</h6>
@@ -64,15 +67,14 @@
         <mat-card-title>{{item.title}}</mat-card-title>
         <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
         <mat-card-content>
-            <p>
-                {{item.description}}
-            </p>
+            {{item.short_description || item.description}}
         </mat-card-content>
-        <p><strong>Ціна:</strong> {{item.price}} грн.</p>
+        <strong>Ціна: {{item.price}} грн.</strong>
         <mat-card-actions>
             <button mat-raised-button color="accent" (click)="addToCart(item)">
                 Додати у кошик
             </button>
+            
         </mat-card-actions>
     </mat-card>
 

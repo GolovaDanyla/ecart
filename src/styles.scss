@@ -37,3 +37,6 @@ $ecart-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Times New Roman', Times, serif; }
+* {
+  box-sizing: border-box;
+}

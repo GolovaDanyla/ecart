@@ -1,88 +1,77 @@
 <mat-toolbar class="toolbar">
-  <mat-icon style="font-size: 30px; color: white">store</mat-icon> &nbsp; &nbsp;
-  <strong style="font-size: 40px; color: white" routerLink="/products">Podlivka store</strong>  &nbsp; &nbsp;
-
-  <div class="number">
-
-      <h4>+38(066)-842-03-91</h4>
-      <h4>+38(050)-074-03-11</h4>
-  </div>
   
+  <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
 
-<button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
-  <mat-icon>shopping_cart</mat-icon>
-  <div>{{totalItemNumber}}</div>
-</button>
+  <!-- <div class="number">
+
+    <h4>+38(066)-842-03-91</h4>
+    <h4>+38(050)-074-03-11</h4>
+  </div> -->
+<span style="flex: 1 1 auto;"></span>
+
+  <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent"  class="example-icon">
+    <mat-icon>shopping_cart</mat-icon>
+    <div>{{totalItemNumber}}</div>
+  </button>
 </mat-toolbar>
 <ng-container *ngIf="products.length !=0">
- 
-        <table >
-          <thead>
-            <tr>
-              <th>№</th>
-              <th>Назва товару</th>
-              <th>Фото товару</th>
-              <th>Ціна</th>
-              <th>Опис</th>
-              <th>Кількість</th>
-              <th>Дія</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of products, let i = index">
-              <td>{{i + 1}}</td>
-              <td>{{item.title}}</td>
-              <td>
-                <img src="{{item.image}}" alt style="width:80px; height: 80px;">
-              </td>
-              <td>{{item.price}} грн.</td>
-              <td>{{item.description}}</td>
-              <td>1</td>
-              <td>
-                <form style="display: flex;">
-                  <button mat-button (click)="removeProduct(item)" class="btn btn-dark">
-                    <mat-icon>delete</mat-icon>
-                  </button>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <!-- <td colspan=""></td> -->
-              <td>
-                <button (click)="removeAllProduct()" class="btn btn-dark">
-                  Очистити
-                </button>
-              </td>
-              <td>
-                <button routerLink="/products" class="btn btn-dark">
-                  Купити ще
-                </button>
-              </td>
-              <td>
-                <button class="btn btn-success" (click)="buyNow()">Придбати зараз</button>
-                <!-- <app-buy></app-buy> -->
-              </td>
-              <td>
-                <strong>Всього: ₴{{allProducts}}</strong>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-     
-</ng-container>
 
-<ng-container *ngIf="products.length == 0">
-
- 
-      <h4>Мій кошик</h4>
-    
-    <div>
-      <img src="/assets/empty.png" alt>
-      <h5>Ваш кошик пустий</h5>
-      <!-- <h6>Добавити зараз</h6> -->
-      <button routerLink="/products" class="btn btn-dark">
-        Купити зараз
-      </button>
+  <div>
+    <!-- <thead>
+      <tr>
+        <th>№</th>
+        <th>Назва товару</th>
+        <th>Фото товару</th>
+        <th>Ціна</th>
+        <th>Опис</th>
+        <th>Кількість</th>
+        <th>Дія</th>
+      </tr>
+    </thead> -->
+    <div class="list-container">
+      <mat-card class="card" *ngFor="let item of products, let i = index" >
+        <!-- <div>{{i + 1}}</div> -->
+        <div>{{item.title}}</div>
+        <div>
+          <img [src]="item.image" alt style="width: 100px; height: 100px;">
+        </div>
+        <div style="text-align: center;">{{item.price}} грн.</div>
+        <!-- <div>{{item.description}}</div> -->
+        <!-- <div style="text-align: center;">1</div> -->
+        <div>
+          <form style="display: flex;">
+            <button mat-icon-button (click)="removeProduct(item)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </form>
+        </div>
+      </mat-card>
+      <div class="btn-collection">
+        <!-- <td colspan=""></td> -->
+          <button  mat-raised-button color="accent" (click)="removeAllProduct()">
+            Очистити
+          </button>
+          <button  mat-raised-button color="accent" routerLink="/products">
+            Купити ще
+          </button>
+          <button  mat-raised-button color="primary" (click)="buyNow()">Придбати зараз</button>
+          <!-- <app-buy></app-buy> -->
+          <strong>Всього: ₴{{allProducts}}</strong>
+        
+        </div>
     </div>
-  
+  </div>
+
 </ng-container>
+<div class="emptyCart">
+
+  <div *ngIf="products.length == 0" class="empty">
+    <h4>Мій кошик</h4>
+    <img src="/assets/empty.png" alt>
+    <h5>Ваш кошик пустий</h5>
+    <!-- <h6>Добавити зараз</h6> -->
+    <button routerLink="/products">
+      Купити зараз
+    </button>
+  </div>
+</div>

@@ -96,5 +96,19 @@
         },
         "quantity": 1,
         "total": 1800
+    },{
+        "id": 7,
+        "title": "TEST",
+        "price": 1800,
+        "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae beatae sed labore, laudantium repellat reprehenderit suscipit quae saepe aperiam adipisci ratione, debitis recusandae obcaecati facere iste aspernatur. Ipsam, quis? \n \n \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae beatae sed labore, laudantium repellat reprehenderit suscipit quae saepe aperiam adipisci ratione, debitis recusandae obcaecati facere iste aspernatur. Ipsam, quis? \n \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae beatae sed labore, laudantium repellat reprehenderit suscipit quae saepe aperiam adipisci ratione, debitis recusandae obcaecati facere iste aspernatur. Ipsam, quis?",
+        "category": "Обігрівачі",
+        "image": "/assets/fire.png",
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        },
+        "quantity": 1,
+        "total": 1800
     }
 ]
