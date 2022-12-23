@@ -1,73 +1,79 @@
 <mat-toolbar class="toolbar">
-    <mat-icon style="font-size: 30px; color: white">store</mat-icon> &nbsp; &nbsp;
-    <strong style="font-size: 40px; color: white" routerLink="/products">Podlivka store</strong>  &nbsp; &nbsp;
+    <mat-icon style="font-size: 30px; color: white">store</mat-icon>
+    <strong style="font-size: 40px; color: white" routerLink="/products">Podlivka store</strong>
 
     <div class="number">
 
         <h4>+38(066)-842-03-91</h4>
         <h4>+38(050)-074-03-11</h4>
     </div>
-    <!-- <div class="form-group">
-        <input type="text" class="form-control" placeholder="Пошук товару">
-    </div> -->
-    
 
-<button routerLink="/cart" class="btn btn-dark">
-    <mat-icon>shopping_cart</mat-icon>
-    <div class="badge bg-danger">{{totalItemNumber}}</div>
-</button>
+
+    <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
+        <mat-icon>shopping_cart</mat-icon>
+        <div>{{totalItemNumber}}</div>
+    </button>
 </mat-toolbar>
 
 <div class="first">
-    
-        <div class="choose">
-            <button routerLink="/products" >
-                <img src="/assets/cart1.png">
-                <h6>Всі товари</h6>
-            </button>
-        </div>
-        <div class="choose">
-            <button routerLink="/products/Електроніка">
-                <img src="/assets/lamp.png">
-                <h6>Електроніка</h6>
-            </button>
-        </div>
-        <div class="choose">
-            <button routerLink="/products/Одяг">
-                <img src="/assets/dress.png">
-                <h6>Одяг</h6>
-            </button>
-        </div>
-        <div class="choose">
-            <button routerLink="/products/Подарунки">
-                <img src="/assets/gift.png">
-                <h6>Подарунки</h6>
-            </button>
-        </div>
-        <div class="choose">
-            <button routerLink="/products/Обігрівачі">
-                <img src="/assets/house.png">
-                <h6>Обігрівачі/Плити</h6>
-            </button>
-        </div>
-    
+
+
+    <button routerLink="/products">
+        <img src="/assets/cart1.png">
+        <h6>Всі товари</h6>
+    </button>
+
+
+    <button routerLink="/products/Електроніка">
+        <img src="/assets/lamp.png">
+        <h6>Електроніка</h6>
+    </button>
+
+
+    <button routerLink="/products/Одяг">
+        <img src="/assets/dress.png">
+        <h6>Одяг</h6>
+    </button>
+
+
+    <button routerLink="/products/Подарунки">
+        <img src="/assets/gift.png">
+        <h6>Подарунки</h6>
+    </button>
+
+
+    <button routerLink="/products/Обігрівачі">
+        <img src="/assets/house.png">
+        <h6>Обігрівачі/Плити</h6>
+    </button>
+
+
 </div>
 
-<div class="container">
-    <div class="row">
-        <ng-container *ngFor="let item of productList; let idx = index">
-            <div class="card col-md-3">
-                <img src="{{item.image}}" alt="" [routerLink]="'/lot/' + idx">
-                <h5 style="text-align: center;">{{item.title}}</h5>
-                <p class="itemdata">{{item.description}}</p>
-                <p><strong>Ціна:</strong> {{item.price}} грн.</p>
-                <p>{{item.category}}</p>
-                <button class="btn btn-dark" (click)="addToCart(item)">
-                    Додати у кошик
-                </button>
-            </div>
-        </ng-container>
 
-    </div>
+
+<div class="card">
+
+    <mat-card class="example-card" *ngFor="let item of productList; let idx = index">
+        <mat-card-header>
+            <div class="header-image">
+                <img mat-card-image src="{{item.image}}" alt="" [routerLink]="'/lot/' + idx">
+
+            </div>
+        </mat-card-header>
+        <mat-card-title>{{item.title}}</mat-card-title>
+        <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
+        <mat-card-content>
+            <p>
+                {{item.description}}
+            </p>
+        </mat-card-content>
+        <p><strong>Ціна:</strong> {{item.price}} грн.</p>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="addToCart(item)">
+                Додати у кошик
+            </button>
+        </mat-card-actions>
+    </mat-card>
 
 </div>
