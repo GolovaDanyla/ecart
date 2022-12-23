@@ -1,5 +1,7 @@
-<mat-toolbar class="toolbar">
-    <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
+<div class="toolbar">
+
+    <mat-toolbar style="background-color: black;">
+        <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
 
     <!-- <div class="number">
         <div>
@@ -12,14 +14,16 @@
         </div>
 
     </div> -->
-    <span style="flex: 1 1 auto;"></span>
+    <span style="flex: 1 auto;"></span>
 
     <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent" style="margin-right: 10px;">
         <mat-icon>shopping_cart</mat-icon>
         <div>{{totalItemNumber}}</div>
     </button>
 </mat-toolbar>
+</div>
 
+<img src="/assets/flag.png" alt="" class="podlivka">
 <div class="first">
     <button routerLink="/products">
         <img src="/assets/cart1.png">
@@ -52,6 +56,9 @@
 
 
 </div>
+
+    
+
 
 
 

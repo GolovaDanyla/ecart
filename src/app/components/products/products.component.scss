@@ -1,15 +1,19 @@
 .first {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: transparent;
+    justify-content: space-around;
     margin: 0px 15px;
     text-align: center;
+    position: relative;
+    
     color: black;
     width: 100%;
     transform: scale(0.8);
     button {
         border: 0px;
-        background-color: white;
+        background-color: transparent;
+        font-size: 20px;
     }
 
     img {
@@ -61,19 +65,29 @@
         transform: scale(1.1)
     }
 }
+.podlivka{
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
 
-.number {
-    display: flex;
-    flex-direction: column;
-    color: white;
+}
+
+// .number {
+//     display: flex;
+//     flex-direction: column;
+//     color: white;
     
-    // padding-top: 13px;
-  }
+//     // padding-top: 13px;
+//   }
   .toolbar{
     display: flex;
     flex-direction: row;
     // justify-content: space-between;
     background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
   }
 //   @media (max-device-width: 390px){
 //     .example-card{
