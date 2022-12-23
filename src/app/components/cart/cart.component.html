@@ -31,16 +31,16 @@
     <div class="list-container">
       <mat-card class="card" *ngFor="let item of products, let i = index" >
         <!-- <div>{{i + 1}}</div> -->
-        <div>{{item.title}}</div>
+        <!-- <div>{{item.title}}</div> -->
         <div>
-          <img [src]="item.image" alt style="width: 100px; height: 100px;">
+          <img [src]="item.image" alt style="width: 80px; height: 80px;">
         </div>
         <div style="text-align: center;">{{item.price}} грн.</div>
         <!-- <div>{{item.description}}</div> -->
         <!-- <div style="text-align: center;">1</div> -->
         <div>
           <form style="display: flex;">
-            <button mat-icon-button (click)="removeProduct(item)">
+            <button mat-icon-button color="warn" (click)="removeProduct(item)">
               <mat-icon>delete</mat-icon>
             </button>
           </form>
