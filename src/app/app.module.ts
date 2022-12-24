@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';;
 import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { LotComponent } from './components/lot/lot.component';
@@ -21,22 +20,19 @@ import {MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog
 import {MatRadioModule} from '@angular/material/radio';
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
-
-
-
-
+import { SwiperModule } from 'swiper/angular';
+import { SwipelistComponent } from './controls/swipelist/swipelist.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    CartComponent,
-    FooterComponent,
+    CartComponent,    
     LotComponent,
     BuyComponent,
-    DialogAnimationsExampleDialog
+    DialogAnimationsExampleDialog,
+    SwipelistComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +50,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatDialogModule,
     MatRadioModule,
     MatTableModule,
-    MatToolbarModule
-    
+    MatToolbarModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

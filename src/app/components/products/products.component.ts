@@ -41,12 +41,18 @@ export class ProductsComponent {
   }
   ngOnInit(): void {
     this.cartApi.getProductData().subscribe(res => {
-    this.totalItemNumber = res.length;
-  })
-   
+      this.totalItemNumber = res.length;
+    })
+
   }
   addToCart(item: any) {
     this.cartApi.addToCart(item);
     let snackBarRef = this.snackBar.open(`Ви додали у кошик - ${item.title}`, '', { duration: 1500 });
+  }
+  getImage(item: any) {
+    if (item.image instanceof Array) {
+      return item.image[0];
+    }
+    return item.image;
   }
 }

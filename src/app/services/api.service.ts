@@ -1,4 +1,4 @@
-// import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import data from '../../assets/myProducts.json';
@@ -6,15 +6,17 @@ import data from '../../assets/myProducts.json';
   providedIn: 'root'
 })
 export class ApiService {
+  botUrl = 'https://binancebot.vps.webdock.cloud/?'
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
-  
   getProduct() {
     return new Observable<any>(observe => {
       observe.next(data)
     })
-    // return this.http.get("https://fakestoreapi.com/products").pipe(map((res: any) => {
-    //   return data;
-    // }))
+
   }
+  sendBot(name: string, phone: string, comment: string) {
+    return this.http.get(`${this.botUrl}name=${name}&phone=${phone}&comment=${comment}`).subscribe(d => true);
+  }
+
 }

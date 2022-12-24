@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { CartapiService } from 'src/app/services/cartapi.service';
+import { SwiperComponent } from "swiper/angular";
 
 @Component({
   selector: 'app-lot',
@@ -42,5 +43,11 @@ export class LotComponent {
   addToCart(item: any) {
     this.cartApi.addToCart(item);
     let snackBarRef = this.snackBar.open(`Ви додали у кошик - ${item.title}`, '', { duration: 1500 });
+  }
+  getImages(item: any) {
+    if(typeof item.image === 'string') {
+      return [item.image];
+    }
+    return item.image;
   }
 }

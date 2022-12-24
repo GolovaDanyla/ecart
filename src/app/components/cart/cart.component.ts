@@ -21,7 +21,7 @@ export class CartComponent {
     private snackBar: MatSnackBar,
     public dialog: MatDialog
   ) {
-    
+
   }
 
   ngOnInit(): void {
@@ -37,7 +37,10 @@ export class CartComponent {
   openDialog(): void {
     this.dialog.open(DialogAnimationsExampleDialog, {
       // width: '500px'
-
+      data: {
+        list: this.products.map((i: any) => i.title),
+        total: this.allProducts + ' грн'
+      }
     });
   }
   removeProduct(item: any) {

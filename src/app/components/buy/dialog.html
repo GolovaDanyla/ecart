@@ -1,14 +1,14 @@
 <div style="padding: 2rem;">
 
-    <form class="example-form" style="display: flex; flex-direction: column;">
+    <div class="example-form" style="display: flex; flex-direction: column;">
         <mat-form-field class="example-full-width">
             <mat-label>Ваше Ім'я</mat-label>
-            <input type="text" matInput placeholder="Ім'я">
+            <input type="text" [(ngModel)]="name" matInput placeholder="Ім'я">
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Телефон</mat-label>
             <span matPrefix>+38 &nbsp;</span>
-            <input type="tel" matInput placeholder="099-999-9999">
+            <input type="tel"  [(ngModel)]="phone" matInput placeholder="099-999-9999">
         </mat-form-field>
         <!-- <mat-form-field class="example-full-width">
             <mat-label>Город</mat-label>
@@ -28,6 +28,6 @@
             становить лише 100грн! З повагою, Ваша Podlivka_store! Все буде Україна!</h5> -->
             <br>
         <button  mat-raised-button color="primary"  (click)="buy()">Купити зараз!</button>
-    </form>
+        </div>
 
 </div>

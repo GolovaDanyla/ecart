@@ -2,15 +2,18 @@
     display: flex;
     flex-direction: row;
     background-color: transparent;
-    justify-content: center;
-    margin: 0px 15px;
+    /* justify-content: center; */
+    /* margin: auto; */
     text-align: center;
-    // position: relative;
-    
     color: black;
     width: 100%;
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
+    width: 100%;
+    overflow-x: auto;
+
     button {
+        flex: 1;
+        min-width: 95px;
         border: 0px;
         background-color: transparent;
         font-size: 20px;

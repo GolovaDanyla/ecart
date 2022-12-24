@@ -1,4 +1,5 @@
 
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -32,6 +33,9 @@ $ecart-theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($ecart-theme);
+
+
+// @import '~swiper/swiper-bundle';
 
 /* You can add global styles to this file, and also import other style files */
 

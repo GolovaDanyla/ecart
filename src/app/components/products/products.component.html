@@ -59,16 +59,15 @@
 
     
 
-
-
-
 <div class="card">
 
-    <mat-card class="example-card" *ngFor="let item of productList; let idx = index">
+    <mat-card class="example-card" *ngFor="let item of productList;">
         <mat-card-header>
             <div class="header-image">
-                <img mat-card-image src="{{item.image}}" alt="" [routerLink]="'/lot/' + idx">
-
+                <img mat-card-image [src]="getImage(item)" 
+                    [alt]="item.title" 
+                    [title]="item.title"  
+                    [routerLink]="'/lot/' + item.id">
             </div>
         </mat-card-header>
         <mat-card-title>{{item.title}}</mat-card-title>
