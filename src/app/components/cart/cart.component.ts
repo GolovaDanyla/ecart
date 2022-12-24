@@ -42,6 +42,10 @@ export class CartComponent {
         total: this.allProducts + ' грн'
       }
     });
+    
+    // setInterval((i:any) => {
+    //   this.removeAllProduct();
+    // }, 5000)
   }
   removeProduct(item: any) {
     this.cartApi.removeCartData(item);

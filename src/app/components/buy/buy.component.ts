@@ -1,6 +1,8 @@
 import { Component, Inject, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from 'src/app/services/api.service';
+import { CartapiService } from 'src/app/services/cartapi.service';
 
 @Component({
   selector: 'app-buy',
@@ -11,7 +13,8 @@ export class BuyComponent {
   @Input() data: any;
 
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+    ) { }
 
   openDialog(): void {
     this.dialog.open(DialogAnimationsExampleDialog, {
@@ -32,7 +35,9 @@ export class DialogAnimationsExampleDialog {
   constructor(
     public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private snackBar: MatSnackBar,
+    private cartApi: CartapiService
   ) { }
 
   buy() {
@@ -43,7 +48,10 @@ export class DialogAnimationsExampleDialog {
     console.log('BYE');
     setTimeout(() => {
       this.dialogRef.close();
-    }, 1000)
+    }, 300);
+    this.cartApi.removeAllCart();
+    let snackBarRef = this.snackBar.open(`Дякуємо за замовлення, ${name}! 
+    З Вами зв'яжуться на протязі 10 хвилин для уточненя замовлення.`, '', { duration: 7000 });
 
   }
 }
