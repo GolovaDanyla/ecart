@@ -6,7 +6,11 @@
         "short_description": "Авариіний світлодіодний ліхтар на 60LED",
         "description": "Авариіний світлодіодний ліхтар на 60LED",
         "category": "Електроніка",
-        "image": "/assets/р.png",
+        "image": [
+            "/assets/lamp1.png",
+            "/assets/lamp2.png",
+            "/assets/lamp3.png"
+    ],
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -21,7 +25,11 @@
         "short_description": "Авариіний світлодіодний ліхтар на 3 лампи",
         "description": "Авариіний світлодіодний ліхтар на 3 лампи",
         "category": "Електроніка",
-        "image": "/assets/ккк.png",
+        "image": [
+            "/assets/3lamp1.png",
+            "/assets/3lamp2.png",
+            "/assets/3lamp3.png"
+    ],
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -36,7 +44,13 @@
         "short_description": "Керасиновий обігрівач/пічка Kerona TS-77",
         "description": "Авариіний світлодіодний ліхтар на 3 лампи",
         "category": "Обігрівачі",
-        "image": "/assets/cerosin.png",
+        "image": [
+            "/assets/cerosin.png",
+            "/assets/warm1.png",
+            "/assets/warm2.png",
+            "/assets/warm3.png",
+            "/assets/warm4.png"
+    ],
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -51,7 +65,12 @@
         "short_description": "Авариіний світлодіодний ліхтар 60LED",
         "description": "Авариіний світлодіодний ліхтар 60LED",
         "category": "Електроніка",
-        "image": "/assets/м.jpg",
+        "image": [
+            "/assets/0lamp60.png",
+            "/assets/1lamp60.png",
+            "/assets/2lamp60.png",
+            "/assets/3lamp60.png"
+        ],
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -66,7 +85,11 @@
         "short_description": "Прожектор акумуляторний з повербанком",
         "description": "Прожектор акумуляторний з повербанком",
         "category": "Одяг",
-        "image": "/assets/prod.png",
+        "image": [
+            "/assets/prod.png",
+            "/assets/proj1.png",
+            "/assets/proj2.png"
+        ],
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -79,9 +102,14 @@
         "title": "Smart Watch",
         "price": 2000,
         "short_description": "Розумні часи ",
-        "description": "",
+        "description": "Великий сенсорний дисплей з більш ніж 20 змінними заставками займає більшу частину поверхні смарт годинника.\n Загартоване скло з олеофобним покриттям надійно захищає екран від подряпин та бруду.\n Діагональ становить 1,75 дюйма, IPS-матриця дозволяє досягти приголомшливої ​​передачі кольорів під будь-яким кутом огляду.\n Корпус складається з цинкового сплаву, силіконовий ремінець.\n Щоб максимально персоналізувати гаджет, передбачено можливість зміни зовнішнього вигляду циферблату. \n\nОсновні характеристики:\nРозмір екрану: 1,75 HD IPS кольоровий екран\nМова програми: Українська та інші\nВодонепроникність: IP67\nМатеріал екрану: гартоване скло\nТип: Розумний годинник",
+        
         "category": "Електроніка",
-        "image": "/assets/clock.png",
+        "image": [
+            "/assets/clock.png",
+            "/assets/clock2.png",
+            "/assets/clock3.png"
+        ],
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -103,24 +131,84 @@
         },
         "quantity": 1,
         "total": 1800
-    },{
+    },
+    {
         "id": 7,
-        "title": "TEST",
-        "price": 1800,
-        "short_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae beatae sed labore, laudantium repellat reprehenderit suscipit quae saepe aperiam adipisci ratione, debitis recusandae obcaecati facere iste aspernatur. Ipsam, quis? \n \n \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae beatae sed labore, laudantium repellat reprehenderit suscipit quae saepe aperiam adipisci ratione, debitis recusandae obcaecati facere iste aspernatur. Ipsam, quis? \n \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae beatae sed labore, laudantium repellat reprehenderit suscipit quae saepe aperiam adipisci ratione, debitis recusandae obcaecati facere iste aspernatur. Ipsam, quis?",
-        "category": "Обігрівачі",
+        "title": "Тример KEMEI",
+        "price": 1049,
+        "short_description": "Трімер для гоління",
+        "description": "",
+        "category": "Електроніка",
         "image": [
-            "/assets/fire.png",
-            "/assets/flag.png",
-            "/assets/gift.png"
-
+            "/assets/kemei1.png",
+            "/assets/kemei2.png",
+            "/assets/kemei3.png",
+            "/assets/kemei4.png",
+            "/assets/kemei5.png"
         ],
         "rating": {
             "rate": 4.7,
             "count": 500
         },
         "quantity": 1,
-        "total": 1800
+        "total": 1049
+    },
+    {
+        "id": 8,
+        "title": "Тример Geemy 3in1",
+        "price": 699,
+        "short_description": "Трімер для гоління",
+        "description": "",
+        "category": "Електроніка",
+        "image": [
+            "/assets/trimer.png",
+            "/assets/trimer1.png",
+            "/assets/trimer2.png"
+        ],
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        },
+        "quantity": 1,
+        "total": 699
+    },
+    {
+        "id": 9,
+        "title": "Електробритва Mozer MZ-1153",
+        "price": 799,
+        "short_description": "Електробритва Mozer MZ-1153",
+        "description": "",
+        "category": "Електроніка",
+        "image": [
+            "/assets/bread.png",
+            "/assets/bread1.png",
+            "/assets/bread2.png",
+            "/assets/bread3.png"
+        ],
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        },
+        "quantity": 1,
+        "total": 799
+    },
+    {
+        "id": 10,
+        "title": "PowerBank 20000mAh ACL",
+        "price": 2000,
+        "short_description": "PowerBank 20000mAh ACL",
+        "description": "",
+        "category": "Електроніка",
+        "image": [
+            "/assets/pb.png",
+            "/assets/pb2.png",
+            "/assets/pb3.png"
+        ],
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        },
+        "quantity": 1,
+        "total": 2000
     }
 ]

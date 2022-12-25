@@ -27,8 +27,11 @@ class="container">
         <swipelist [items]="getImages(productItem)"></swipelist>
         
         <div>
-          <h2 style="text-align: center">{{ productItem.title }}</h2>
-          <p>{{ productItem.description }}</p>
+          <h1 style="text-align: center">{{ productItem.title }}</h1>
+          <pre>
+            <h3>{{ productItem.description }}</h3>
+            
+          </pre>
           <h1>{{ productItem.total }} грн.</h1>
         </div>
       </div>
