@@ -210,5 +210,23 @@
         },
         "quantity": 1,
         "total": 2000
+    },
+    {
+        "id": 11,
+        "title": "PowerBank 30000mAh ACL",
+        "price": 2500,
+        "short_description": "PowerBank 30000mAh ACL",
+        "description": "",
+        "category": "Електроніка",
+        "image": [
+            "/assets/pb30.png",
+            "/assets/pb30_1.png"
+        ],
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        },
+        "quantity": 1,
+        "total": 2500
     }
 ]
