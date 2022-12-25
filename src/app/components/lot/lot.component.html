@@ -1,30 +1,27 @@
-<div class="toolbar">
+<!-- <div class="toolbar">
 
   <mat-toolbar class="toolbar">
-    <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
+    <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong> -->
 
   <!-- <div class="number">
 
       <h4>+38(066)-842-03-91</h4>
       <h4>+38(050)-074-03-11</h4>
   </div> -->
-  <span style="flex: 1 1 auto;"></span>
+  <!-- <span style="flex: 1 1 auto;"></span>
 
 <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
   <mat-icon>shopping_cart</mat-icon>
   <div>{{totalItemNumber}}</div>
 </button>
 </mat-toolbar>
-</div>
+</div> -->
 
 <div
 class="container">
 <mat-card class="card">
 <mat-card-content>
   
-  <swipelist [items]="getImages(productItem)"></swipelist>
-  
-  <mat-card>
     <mat-card-content>
       <div class="container">
         <swipelist [items]="getImages(productItem)"></swipelist>
@@ -45,6 +42,8 @@ class="container">
       Додати у кошик
     </button>
   </mat-card-actions>
+</mat-card-content>
 </mat-card>
 
+</div>
 

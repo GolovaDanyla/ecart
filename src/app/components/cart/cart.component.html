@@ -18,7 +18,9 @@
         <!-- <div>{{i + 1}}</div> -->
         <!-- <div>{{item.title}}</div> -->
         <div>
-          <img [src]="item.image" alt style="width: 80px; height: 80px;">
+          <img [src]="getImage(item)"
+          [alt]="item.title"
+          [title]="item.title" style="width: 80px; height: 80px;">
         </div>
         <div style="text-align: center;">{{item.price}} грн.</div>
         <!-- <div>{{item.description}}</div> -->
