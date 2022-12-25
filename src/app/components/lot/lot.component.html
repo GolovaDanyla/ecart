@@ -24,6 +24,7 @@
       <div>
         <h2 style="text-align: center;">{{productItem.title}}</h2>
         <p>{{productItem.description}}</p>
+        <h1>{{productItem.total}} грн.</h1>
       </div>
 
     </div>
@@ -31,7 +32,7 @@
   <mat-card-actions>
     <button mat-raised-button color="accent" 
       (click)="addToCart(productItem)">
-      Додати у кошик
+      Додати у кошик {{productItem.total}} грн.
     </button>
   </mat-card-actions>
 </mat-card>
