@@ -1,4 +1,31 @@
+<div style="display: flex; flex-direction: column; min-height: 100vh;">
 
-<router-outlet></router-outlet>
+  <mat-toolbar class="toolbar">
+    <strong
+      style="font-size: 30px; color: white; cursor: pointer"
+      routerLink="/products"
+      >Podlivka store</strong
+    >
 
-<!-- <app-products></app-products> -->
+    <!-- <div class="number">
+
+        <h4>+38(066)-842-03-91</h4>
+        <h4>+38(050)-074-03-11</h4>
+    </div> -->
+    <span style="flex: 1 1 auto"></span>
+
+    <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
+      <mat-icon>shopping_cart</mat-icon>
+      <div>{{ totalItemNumber }}</div>
+    </button>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+  <span style="flex: 1 1 auto;"></span>
+
+  <div class="toolbar footer">
+    <h4>+38(066)-842-03-91</h4>
+    <h4>+38(050)-074-03-11</h4>
+  </div>
+</div>

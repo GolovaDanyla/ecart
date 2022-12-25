@@ -1,14 +1,24 @@
 .number {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    padding-top: 13px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-top: 13px;
+}
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  >*{
+    flex:3;
   }
-  .toolbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-  }
-  
-
+  >*:first-child {
+    flex:1;
+}
+}
