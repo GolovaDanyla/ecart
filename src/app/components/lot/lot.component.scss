@@ -1,14 +1,29 @@
-.number {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    padding-top: 13px;
-  }
-  .toolbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-  }
-  
+// .number {
+//   display: flex;
+//   flex-direction: column;
+//   color: white;
+//   padding-top: 13px;
+// }
 
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  // flex: 1;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

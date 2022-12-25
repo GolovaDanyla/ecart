@@ -13,25 +13,24 @@
   <div>{{totalItemNumber}}</div>
 </button>
 </mat-toolbar>
-<mat-card>
 
-  <mat-card-content>
+<div
+class="container">
+<mat-card class="card">
+<mat-card-content>
 
-    <div
-      class="container"
-      style="display: flex; flex-direction: row;">
         <swipelist [items]="getImages(productItem)"></swipelist>
       <div>
         <h2 style="text-align: center;">{{productItem.title}}</h2>
         <p>{{productItem.description}}</p>
       </div>
 
-    </div>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="accent" 
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" 
       (click)="addToCart(productItem)">
       Додати у кошик
     </button>
   </mat-card-actions>
 </mat-card>
+</div>
