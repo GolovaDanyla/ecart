@@ -1,8 +1,6 @@
-
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -21,26 +19,34 @@ $ecart-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$ecart-theme: mat.define-light-theme((
-  color: (
-    primary: $ecart-primary,
-    accent: $ecart-accent,
-    warn: $ecart-warn,
+$ecart-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $ecart-primary,
+      accent: $ecart-accent,
+      warn: $ecart-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($ecart-theme);
 
-
 // @import '~swiper/swiper-bundle';
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Times New Roman', Times, serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  // font-family: "Times New Roman", Times, serif;
+  font-family: 'Merriweather', serif;
+}
 * {
   box-sizing: border-box;
 }
