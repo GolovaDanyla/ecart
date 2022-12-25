@@ -10,6 +10,8 @@
     /* transform: scale(0.8); */
     width: 100%;
     overflow-x: auto;
+    background-color: rgba(0,0,0,0.04);
+    margin-bottom: 0.5rem;
 
     button {
         flex: 1;
@@ -49,7 +51,9 @@
     border-radius: 10px;
     // padding: 45px;
     // margin: 0px;
-    border: 0.5px solid black;
+    // border: 0.5px solid black;
+    box-shadow: 0 6px 13px -4px rgb(0 0 0 / 50%);
+    margin: 4px;
     .header-image{
         background-size: cover;
         transition: 0.3s ease-in-out;
@@ -76,6 +80,7 @@
 
 }
 
+
 .number {
     display: flex;
     margin: auto;
@@ -91,6 +96,15 @@
     
     // padding-top: 13px;
   }
+
+// .number {
+//     display: flex;
+//     flex-direction: column;
+//     color: white;
+
+//     // padding-top: 13px;
+//   }
+
   .toolbar{
     display: flex;
     flex-direction: row;
@@ -107,5 +121,4 @@
 //         max-width: inherit;
 //     }
 //   }
-    
-  
+

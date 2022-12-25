@@ -1,5 +1,7 @@
-<mat-toolbar class="toolbar">
-  <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
+<div class="toolbar">
+
+  <mat-toolbar class="toolbar">
+    <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
 
   <!-- <div class="number">
 
@@ -13,18 +15,29 @@
   <div>{{totalItemNumber}}</div>
 </button>
 </mat-toolbar>
+</div>
 
 <div
 class="container">
 <mat-card class="card">
 <mat-card-content>
-
+  
+  <swipelist [items]="getImages(productItem)"></swipelist>
+  
+  <mat-card>
+    <mat-card-content>
+      <div class="container">
         <swipelist [items]="getImages(productItem)"></swipelist>
-      <div>
-        <h2 style="text-align: center;">{{productItem.title}}</h2>
-        <p>{{productItem.description}}</p>
+        
+        <div>
+          <h2 style="text-align: center">{{ productItem.title }}</h2>
+          <p>{{ productItem.description }}</p>
+          <h1>{{ productItem.total }} грн.</h1>
+        </div>
       </div>
-
+      
+      
+      
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="accent" 
@@ -33,4 +46,5 @@ class="container">
     </button>
   </mat-card-actions>
 </mat-card>
-</div>
+
+

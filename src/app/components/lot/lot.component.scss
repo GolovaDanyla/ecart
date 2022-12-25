@@ -1,3 +1,4 @@
+
 // .number {
 //   display: flex;
 //   flex-direction: column;
@@ -5,12 +6,21 @@
 //   padding-top: 13px;
 // }
 
+
+.number {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-top: 13px;
+}
+
 .toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
 }
+
 
 .container {
   display: flex;
@@ -27,3 +37,17 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  >*{
+    flex:3;
+  }
+  >*:first-child {
+    flex:1;
+}
+}
+

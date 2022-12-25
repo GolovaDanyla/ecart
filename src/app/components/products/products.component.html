@@ -1,3 +1,4 @@
+
 <div class="toolbar">
 
     <mat-toolbar style="background-color: black;">
@@ -26,6 +27,7 @@
     </button>
 </mat-toolbar>
 </div>
+
 
 <!-- <img src="/assets/flag.png" alt="" class="podlivka"> -->
 <div class="first">
@@ -62,16 +64,15 @@
 </div>
 
 
-    
 
 <div class="card">
 
     <mat-card class="example-card" *ngFor="let item of productList;">
         <mat-card-header>
             <div class="header-image">
-                <img mat-card-image [src]="getImage(item)" 
-                    [alt]="item.title" 
-                    [title]="item.title"  
+                <img mat-card-image [src]="getImage(item)"
+                    [alt]="item.title"
+                    [title]="item.title"
                     [routerLink]="'/lot/' + item.id">
             </div>
         </mat-card-header>
@@ -85,7 +86,7 @@
             <button mat-raised-button color="accent" (click)="addToCart(item)">
                 Додати у кошик
             </button>
-            
+
         </mat-card-actions>
     </mat-card>
 
