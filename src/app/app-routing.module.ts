@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'lot', component: LotComponent },
   { path: 'lot/:id', component: LotComponent },
+  { path: '**', redirectTo: 'products', pathMatch: 'full' },
 ];
 
 @NgModule({
