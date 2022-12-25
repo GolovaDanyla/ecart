@@ -1,38 +1,17 @@
-<mat-toolbar class="toolbar">
-  <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong>
-
-  <!-- <div class="number">
-
-      <h4>+38(066)-842-03-91</h4>
-      <h4>+38(050)-074-03-11</h4>
-  </div> -->
-  <span style="flex: 1 1 auto;"></span>
-
-<button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
-  <mat-icon>shopping_cart</mat-icon>
-  <div>{{totalItemNumber}}</div>
-</button>
-</mat-toolbar>
 <mat-card>
-
   <mat-card-content>
-
-    <div
-      class="container"
-      style="display: flex; flex-direction: row;">
-        <swipelist [items]="getImages(productItem)"></swipelist>
+    <div class="container">
+      <swipelist [items]="getImages(productItem)"></swipelist>
       <div>
-        <h2 style="text-align: center;">{{productItem.title}}</h2>
-        <p>{{productItem.description}}</p>
-        <h1>{{productItem.total}} грн.</h1>
+        <h2 style="text-align: center">{{ productItem.title }}</h2>
+        <p>{{ productItem.description }}</p>
+        <h1>{{ productItem.total }} грн.</h1>
       </div>
-
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="accent" 
-      (click)="addToCart(productItem)">
-      Додати у кошик {{productItem.total}} грн.
+    <button mat-raised-button color="accent" (click)="addToCart(productItem)">
+      Додати у кошик {{ productItem.total }} грн.
     </button>
   </mat-card-actions>
 </mat-card>
