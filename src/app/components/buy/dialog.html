@@ -1,4 +1,4 @@
-<div style="padding: 2rem;">
+<div style="padding: 2rem;     max-height: 100vh;">
 
     <div class="example-form" style="display: flex; flex-direction: column;">
         <mat-form-field class="example-full-width">
@@ -12,20 +12,20 @@
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Місто</mat-label>
-            <input type="text" [(ngModel)]="name" matInput placeholder="Місто">
+            <input type="text" [(ngModel)]="city" matInput placeholder="Місто">
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>№ відділення</mat-label>
-            <input type="tel" [(ngModel)]="name" matInput placeholder="№ відділення">
+            <input type="tel" [(ngModel)]="deliveryNumber" matInput placeholder="№ відділення">
         </mat-form-field>
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="Нова пошта">Нова пошта</mat-radio-button>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="deliveryCompany">
+            <mat-radio-button value="Нова пошта" [checked]="true">Нова пошта</mat-radio-button>
             <mat-radio-button value="MeestExpress">MeestExpress</mat-radio-button>
           </mat-radio-group>
         <br>
         <button  mat-raised-button color="primary"  (click)="buy()">Купити зараз!</button>
     </div>
-    
+
 </div>
 <!-- <mat-form-field class="example-full-width">
     <mat-label>Город</mat-label>
