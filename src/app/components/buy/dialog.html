@@ -10,6 +10,18 @@
             <span matPrefix>+38 &nbsp;</span>
             <input type="tel"  [(ngModel)]="phone" matInput placeholder="099-999-9999">
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Місто</mat-label>
+            <input type="text" [(ngModel)]="name" matInput placeholder="Місто">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>№ відділення</mat-label>
+            <input type="tel" [(ngModel)]="name" matInput placeholder="№ відділення">
+        </mat-form-field>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="Нова пошта">Нова пошта</mat-radio-button>
+            <mat-radio-button value="MeestExpress">MeestExpress</mat-radio-button>
+          </mat-radio-group>
         <br>
         <button  mat-raised-button color="primary"  (click)="buy()">Купити зараз!</button>
     </div>
