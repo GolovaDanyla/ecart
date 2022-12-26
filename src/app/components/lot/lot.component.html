@@ -21,26 +21,26 @@
 class="container">
 <mat-card class="card">
 <mat-card-content>
-  
+
     <mat-card-content>
       <div class="container">
         <swipelist [items]="getImages(productItem)"></swipelist>
-        
+
         <div>
           <h1 style="text-align: center">{{ productItem.title }}</h1>
           <pre>
-            <h3>{{ productItem.description }}</h3>
-            
+            <div style="white-space: break-spaces; text-align: justify;">{{ productItem.description }}</div>
+
           </pre>
-          <h1>{{ productItem.total }} грн.</h1>
+          <h1 >{{ productItem.total }} грн.</h1>
         </div>
       </div>
-      
-      
-      
+
+
+
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent" 
+      <button mat-raised-button color="accent"
       (click)="addToCart(productItem)">
       Додати у кошик
     </button>
