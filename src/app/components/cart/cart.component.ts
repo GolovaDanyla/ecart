@@ -57,4 +57,10 @@ export class CartComponent {
     this.openDialog();
     // let snackBarRef = this.snackBar.open("Ви придбали цю хуйню", '', { duration: 1500 });
   }
+  getImage(item: any) {
+    if (item.image instanceof Array) {
+      return item.image[0];
+    }
+    return item.image;
+  }
 }

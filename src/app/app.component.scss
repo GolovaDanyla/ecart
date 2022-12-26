@@ -5,6 +5,7 @@
   // justify-content: space-between;
   background-color: black;
 }
+
 .footer {
   color: white;
   display: flex;
@@ -13,4 +14,13 @@
   >* {
     margin: 1rem;
   }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: sticky;
+  top: 1px;
+  z-index: 999999;
 }
