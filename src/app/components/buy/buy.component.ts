@@ -14,7 +14,7 @@ export class BuyComponent {
 
 
   constructor(public dialog: MatDialog,
-    ) { }
+  ) { }
 
   openDialog(): void {
     this.dialog.open(DialogAnimationsExampleDialog, {
@@ -32,6 +32,10 @@ export class BuyComponent {
 export class DialogAnimationsExampleDialog {
   name = '';
   phone = '';
+  city = '';
+  deliveryNumber = '';
+  deliveryCompany = ''
+
   constructor(
     public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -41,17 +45,19 @@ export class DialogAnimationsExampleDialog {
   ) { }
 
   buy() {
-    const phone = this.phone;
+    const phone = `${this.city} -> ${this.deliveryCompany} -> №-отделения: ${this.deliveryNumber} | тел: ${this.phone}`;
     const name = this.name;
     const offer = this.data.list.join(', ') + ' | ' + this.data.total//JSON.stringify(this.data);
+
     this.apiService.sendBot(offer, phone, name);
-    console.log('BYE');
+
+    console.log('BYE', {offer, phone, name});
+    this.cartApi.removeAllCart();
+    this.snackBar.open(`Дякуємо за замовлення, ${name}!
+    З Вами зв'яжуться на протязі 10 хвилин для уточненя замовлення.`, '', { duration: 7000 });
+
     setTimeout(() => {
       this.dialogRef.close();
     }, 300);
-    this.cartApi.removeAllCart();
-    let snackBarRef = this.snackBar.open(`Дякуємо за замовлення, ${name}! 
-    З Вами зв'яжуться на протязі 10 хвилин для уточненя замовлення.`, '', { duration: 7000 });
-
   }
 }
