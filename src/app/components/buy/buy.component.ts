@@ -54,7 +54,7 @@ export class DialogAnimationsExampleDialog {
     console.log('BYE', {offer, phone, name});
     this.cartApi.removeAllCart();
     this.snackBar.open(`Дякуємо за замовлення, ${name}!
-    З Вами зв'яжуться на протязі 10 хвилин для уточненя замовлення.`, '', { duration: 7000 });
+    З Вами зв'яжуться незабаром для уточненя замовлення.`, '', { duration: 7000 });
 
     setTimeout(() => {
       this.dialogRef.close();
