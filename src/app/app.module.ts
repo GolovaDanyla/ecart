@@ -22,6 +22,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SwiperModule } from 'swiper/angular';
 import { SwipelistComponent } from './controls/swipelist/swipelist.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { BackComponent } from './components/back/back.component';
+import { MastercardComponent } from './components/mastercard/mastercard.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { DeliveryComponent } from './components/delivery/delivery.component';
+import { GarantComponent } from './components/garant/garant.component';
 
 
 @NgModule({
@@ -32,7 +38,12 @@ import { SwipelistComponent } from './controls/swipelist/swipelist.component';
     LotComponent,
     BuyComponent,
     DialogAnimationsExampleDialog,
-    SwipelistComponent
+    SwipelistComponent,
+    TermsComponent,
+    BackComponent,
+    MastercardComponent,
+    DeliveryComponent,
+    GarantComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +62,8 @@ import { SwipelistComponent } from './controls/swipelist/swipelist.component';
     MatRadioModule,
     MatTableModule,
     MatToolbarModule,
-    SwiperModule
+    SwiperModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

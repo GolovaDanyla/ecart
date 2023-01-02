@@ -1,12 +1,45 @@
 <div class="head">
-
+  
   <mat-toolbar class="toolbar">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="color: white;">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/products">
+        <mat-icon>category</mat-icon>
+        <span>Всі товари</span>
+      </button>
+      <button mat-menu-item routerLink="/products/Електроніка">
+        <mat-icon>wb_incandescent</mat-icon>
+        <span>Електроніка</span>
+      </button>
+      <button mat-menu-item routerLink="/products/Одяг">
+        <mat-icon>accessibility_new</mat-icon>
+        <span>Одяг</span>
+      </button>
+      <button mat-menu-item routerLink="/products/Подарунки">
+        <mat-icon>card_giftcard</mat-icon>
+        <span>Подарунки</span>
+      </button>
+      <button mat-menu-item routerLink="/products/Обігрівачі">
+        <mat-icon>wb_sunny</mat-icon>
+        <span>Обігрівачі\Плити</span>
+      </button>
+     
+      
+     
+     
+    </mat-menu>
+
     <strong
       style="font-size: 30px; color: white; cursor: pointer"
       routerLink="/products"
       >Podlivka store</strong
     >
-
+    
     <!-- <div class="number">
 
         <h4>+38(066)-842-03-91</h4>
@@ -19,16 +52,22 @@
       <div>{{ totalItemNumber }}</div>
     </button>
   </mat-toolbar>
-
+  
   <router-outlet></router-outlet>
-
+  
+  
   <span style="flex: 1 1 auto;"></span>
 
   <div class="toolbar footer">
 
     <h4><a href="tel:+380668420391">+38(066)-842-03-91</a></h4>
     <h4><a href="tel:+380500740311">+38(050)-074-03-11</a></h4>
-    <img src="/assets/logos/Meest_Corporation_logo.svg.png" >
-    <img src="/assets/logos/Nova_Poshta_2022_logo.png" >
+    <span routerLink="/back" style="cursor: pointer;">Умови повернення та обміну</span>
+    <span routerLink="/mastercard" style="cursor: pointer;">Способи оплати</span>
+    <span routerLink="/delivery" style="cursor: pointer;">Умови доставки</span>
+    <span routerLink="/terms" style="cursor: pointer;">Договір оферти</span>
+    <span routerLink="/garant" style="cursor: pointer;">Гарантії</span>
+    <!-- <img src="/assets/logos/Meest_Corporation_logo.svg.png" >
+    <img src="/assets/logos/Nova_Poshta_2022_logo.png" > -->
   </div>
 </div>
