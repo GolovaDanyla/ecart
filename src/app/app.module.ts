@@ -46,7 +46,7 @@ import { GarantComponent } from './components/garant/garant.component';
     GarantComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
