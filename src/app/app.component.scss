@@ -13,16 +13,15 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  >* {
+  > * {
     margin: 1rem;
     max-height: 40px;
   }
   h4 a {
-    color : white;
+    color: white;
     text-decoration: none;
   }
 }
-
 
 .head {
   display: flex;
@@ -32,6 +31,6 @@
   top: 1px;
   // z-index: 999999;
 }
-.example-icon{
+.example-icon {
   color: white;
 }

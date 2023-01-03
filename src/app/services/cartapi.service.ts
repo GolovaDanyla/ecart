@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 const OREDR: string = 'ORDER';
+const localStorage: any = {
+  getItem: (id: string) => {},
+  setItem: (id: string, data: any) => {}
+};
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +19,10 @@ export class CartapiService {
     this.productList.next(this.cartDataList);
   }
   sGet(id: string) {
-    return JSON.parse(localStorage.getItem(id) || 'null');
+    return JSON.parse(localStorage?.getItem(id) || 'null');
   }
   sSet(id: string, data: any){
-    localStorage.setItem(id, JSON.stringify(data));
+    localStorage?.setItem(id, JSON.stringify(data));
   }
   getProductData() {
     return this.productList.asObservable();
