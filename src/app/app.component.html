@@ -35,7 +35,7 @@
     </mat-menu>
 
     <strong
-      style="font-size: 30px; color: white; cursor: pointer"
+      style="font-size: 18px; color: white; cursor: pointer"
       routerLink="/products"
       >Podlivka store</strong
     >
@@ -46,11 +46,23 @@
         <h4>+38(050)-074-03-11</h4>
     </div> -->
     <span style="flex: 1 1 auto"></span>
+    
 
-    <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
-      <mat-icon>shopping_cart</mat-icon>
-      <div>{{ totalItemNumber }}</div>
-    </button>
+      <!-- <mat-icon color="accent">>phone</mat-icon> -->
+      
+      
+      <!-- <span style="flex: auto"></span> -->
+      
+      
+        
+        <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
+          <mat-icon>shopping_cart</mat-icon>
+          <div>{{ totalItemNumber }}</div>
+        </button>
+
+      
+    
+    
   </mat-toolbar>
   
   <router-outlet></router-outlet>

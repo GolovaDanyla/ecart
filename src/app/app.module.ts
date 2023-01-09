@@ -28,6 +28,8 @@ import { MastercardComponent } from './components/mastercard/mastercard.componen
 import {MatMenuModule} from '@angular/material/menu';
 import { DeliveryComponent } from './components/delivery/delivery.component';
 import { GarantComponent } from './components/garant/garant.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 
 @NgModule({
@@ -63,7 +65,8 @@ import { GarantComponent } from './components/garant/garant.component';
     MatTableModule,
     MatToolbarModule,
     SwiperModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
