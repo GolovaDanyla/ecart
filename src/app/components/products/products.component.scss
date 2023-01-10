@@ -35,29 +35,31 @@
 //     font-size: 40px;
 //     color: white
 // }
-.card{
+.card {
     // max-width: 200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    // max-height: 250px;
+   
 }
+
 .example-card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    max-width: 180px;
+    max-width: 250px;
     border-radius: 10px;
     // padding: 45px;
     // margin: 0px;
     // border: 0.5px solid black;
     box-shadow: 0 6px 13px -4px rgb(0 0 0 / 50%);
     margin: 4px;
-    .header-image{
+
+    .header-image {
         background-size: cover;
         transition: 0.3s ease-in-out;
         cursor: pointer;
@@ -75,14 +77,20 @@
         transform: scale(1.1)
     }
 }
-.podlivka{
+
+.podlivka {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
 
 }
-
+// .btn{
+//     position: fixed;
+//     bottom: 5%;
+//     margin-left: 43%;
+//     opacity: 0.8;
+// }
 
 .number {
     display: flex;
@@ -98,7 +106,7 @@
     // max-height: 55px;
 
     // padding-top: 13px;
-  }
+}
 
 // .number {
 //     display: flex;
@@ -108,18 +116,51 @@
 //     // padding-top: 13px;
 //   }
 
-  .toolbar{
+.toolbar {
     display: flex;
     flex-direction: row;
     // justify-content: space-between;
     background-color: black;
-   
-  }
-//   @media (max-device-width: 390px){
-//     .example-card{
-//         width: 100%;
-//         max-width: 160px;
-//         max-width: inherit;
-//     }
-//   }
 
+}
+
+
+@media all and (max-width: 540px) {
+    .example-card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        // width: 100%;
+        max-width: 160px;
+        height: 450px;
+        border-radius: 10px;
+        // padding: 45px;
+        // margin: 0px;
+        // border: 0.5px solid black;
+        box-shadow: 0 6px 13px -4px rgb(0 0 0 / 50%);
+        margin: 4px;
+
+        .header-image {
+            background-size: cover;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        mat-card{
+            height: 380px;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+            transition: 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transition: 0.3s ease-in-out;
+            transform: scale(1.1)
+        }
+    }
+}

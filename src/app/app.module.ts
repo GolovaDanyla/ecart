@@ -29,6 +29,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DeliveryComponent } from './components/delivery/delivery.component';
 import { GarantComponent } from './components/garant/garant.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { NewComponent } from './components/new/new.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 
@@ -45,7 +47,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     BackComponent,
     MastercardComponent,
     DeliveryComponent,
-    GarantComponent
+    GarantComponent,
+    NewComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

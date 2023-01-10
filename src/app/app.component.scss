@@ -6,7 +6,7 @@
   position: sticky !important;
   z-index: 9999;
   // justify-content: space-between;
-  background-color: black;
+  background-color: transparent;
 }
 
 .footer {
@@ -15,6 +15,7 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  background-color: black;
   justify-content: center;
   > * {
     margin: 1rem;
@@ -35,4 +36,7 @@
 }
 .example-icon {
   color: white;
+}
+@media all and (max-width: 540px){
+  
 }

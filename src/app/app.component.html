@@ -1,84 +1,118 @@
 <div class="head">
-  
+
   <mat-toolbar class="toolbar">
     <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button> -->
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="color: white;">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/products">
+      <button mat-menu-item [matMenuTriggerFor]="products">
+
+        Товари
+
         <mat-icon>category</mat-icon>
-        <span>Всі товари</span>
+
       </button>
-      <button mat-menu-item routerLink="/products/Електроніка">
-        <mat-icon>wb_incandescent</mat-icon>
-        <span>Електроніка</span>
+      <mat-menu #products="matMenu">
+        <button mat-menu-item routerLink="/products">
+          Всі товари
+          <mat-icon>category</mat-icon>
+        </button>
+        <button mat-menu-item routerLink="/products/Електроніка">
+          Електроніка
+          <mat-icon>wb_incandescent</mat-icon>
+        </button>
+        <button mat-menu-item routerLink="/products/Одяг">
+          Одяг
+          <mat-icon>accessibility_new</mat-icon>
+        </button>
+        <button mat-menu-item routerLink="/products/Подарунки">
+          Подарунки
+          <mat-icon>card_giftcard</mat-icon>
+        </button>
+        <button mat-menu-item routerLink="/products/Обігрівачі">
+          Обігрівачі\Плити
+          <mat-icon>wb_sunny</mat-icon>
+        </button>
+      </mat-menu>
+      <button mat-menu-item routerLink="/new">
+
+        Новинки
       </button>
-      <button mat-menu-item routerLink="/products/Одяг">
-        <mat-icon>accessibility_new</mat-icon>
-        <span>Одяг</span>
+      <button mat-menu-item routerLink="/about-us">
+
+        Про нас
       </button>
-      <button mat-menu-item routerLink="/products/Подарунки">
-        <mat-icon>card_giftcard</mat-icon>
-        <span>Подарунки</span>
+      <label for=""></label>
+      <button mat-menu-item routerLink="/back">
+
+        Умови повернення та обміну
       </button>
-      <button mat-menu-item routerLink="/products/Обігрівачі">
-        <mat-icon>wb_sunny</mat-icon>
-        <span>Обігрівачі\Плити</span>
+      <button mat-menu-item routerLink="/mastercard">
+
+        Способи оплати
       </button>
-     
-      
-     
-     
+      <button mat-menu-item routerLink="/delivery">
+
+        Умови доставки
+      </button>
+      <button mat-menu-item routerLink="/garant">
+
+        Гарантії
+      </button>
+      <button mat-menu-item routerLink="/terms">
+
+        Договір оферти
+      </button>
+
+
+
+
     </mat-menu>
 
-    <strong
-      style="font-size: 18px; color: white; cursor: pointer"
-      routerLink="/products"
-      >Podlivka store</strong
-    >
-    
+    <strong style="font-size: 18px; color: black; cursor: pointer" routerLink="/products">Магазин "Podlivka"</strong>
+
     <!-- <div class="number">
 
         <h4>+38(066)-842-03-91</h4>
         <h4>+38(050)-074-03-11</h4>
     </div> -->
     <span style="flex: 1 1 auto"></span>
-    
 
-      <!-- <mat-icon color="accent">>phone</mat-icon> -->
-      
-      
-      <!-- <span style="flex: auto"></span> -->
-      
-      
-        
-        <button routerLink="/cart" mat-fab matTooltip="Accent" color="accent">
-          <mat-icon>shopping_cart</mat-icon>
-          <div>{{ totalItemNumber }}</div>
-        </button>
 
-      
-    
-    
+    <!-- <mat-icon color="accent">>phone</mat-icon> -->
+
+
+    <!-- <span style="flex: auto"></span> -->
+
+
+
+    <button routerLink="/cart" mat-mini-fab matTooltip="Accent" color="accent">
+      <mat-icon>shopping_cart</mat-icon>
+      <div>{{ totalItemNumber }}</div>
+    </button>
+
+
+
+
   </mat-toolbar>
-  
+
   <router-outlet></router-outlet>
-  
-  
+
+
   <span style="flex: 1 1 auto;"></span>
 
-  <div class="toolbar footer">
+  <div class="footer">
 
     <h4><a href="tel:+380668420391">+38(066)-842-03-91</a></h4>
     <h4><a href="tel:+380500740311">+38(050)-074-03-11</a></h4>
-    <span routerLink="/back" style="cursor: pointer;">Умови повернення та обміну</span>
+    <!-- <span routerLink="/back" style="cursor: pointer;">Умови повернення та обміну</span>
     <span routerLink="/mastercard" style="cursor: pointer;">Способи оплати</span>
     <span routerLink="/delivery" style="cursor: pointer;">Умови доставки</span>
     <span routerLink="/terms" style="cursor: pointer;">Договір оферти</span>
-    <span routerLink="/garant" style="cursor: pointer;">Гарантії</span>
+    <span routerLink="/garant" style="cursor: pointer;">Гарантії</span> -->
     <!-- <img src="/assets/logos/Meest_Corporation_logo.svg.png" >
     <img src="/assets/logos/Nova_Poshta_2022_logo.png" > -->
   </div>

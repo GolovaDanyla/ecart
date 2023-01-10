@@ -1,10 +1,9 @@
-
 <!-- <div class="toolbar"> -->
 
-    <!-- <mat-toolbar style="background-color: black;">
+<!-- <mat-toolbar style="background-color: black;">
         <strong style="font-size: 30px; color: white; cursor: pointer;" routerLink="/products">Podlivka store</strong> -->
 
-    <!-- <div class="number">
+<!-- <div class="number">
         <div>
             <h4>+38(066)-842-03-91</h4>
 
@@ -15,7 +14,7 @@
         </div>
 
     </div> -->
-    <!-- <div class="number">
+<!-- <div class="number">
         <h4>+38(066)-842-03-91</h4>
         <h4>+38(050)-074-03-11</h4>
     </div>
@@ -62,6 +61,11 @@
 
 
 </div> -->
+<div class="head-image">
+    <img src="/assets/ps.jpg" alt="Podlivka" style="background-position: 0 0; 
+    background-repeat: no-repeat;
+    background-size: 100%; width: 100%; height: 30vh;">
+</div>
 
 
 
@@ -70,9 +74,7 @@
     <mat-card class="example-card" *ngFor="let item of productList;">
         <mat-card-header>
             <div class="header-image">
-                <img mat-card-image [src]="getImage(item)"
-                    [alt]="item.title"
-                    [title]="item.title"
+                <img mat-card-image [src]="getImage(item)" [alt]="item.title" [title]="item.title"
                     [routerLink]="'/lot/' + item.id">
             </div>
         </mat-card-header>
@@ -89,5 +91,8 @@
 
         </mat-card-actions>
     </mat-card>
+    <!-- <button mat-mini-fab color="accent" class="btn">
+        <mat-icon>phone</mat-icon>
+      </button> -->
 
 </div>
