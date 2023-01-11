@@ -31,6 +31,7 @@ import { GarantComponent } from './components/garant/garant.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import { NewComponent } from './components/new/new.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { TopComponent } from './components/top/top.component';
 
 
 
@@ -49,7 +50,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     DeliveryComponent,
     GarantComponent,
     NewComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    TopComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

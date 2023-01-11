@@ -66,6 +66,40 @@
     background-repeat: no-repeat;
     background-size: 100%; width: 100%; height: 30vh;">
 </div>
+<div class="first">
+    <!-- <button routerLink="/products">
+        <img src="/assets/cart.png">
+        <h6>Всі товари</h6>
+    </button> -->
+    <button routerLink="/top">
+        <img src="/assets/top.png">
+        <h6>Топ продаж</h6>
+    </button> 
+    <button routerLink="/new">
+        <img src="/assets/star.png">
+        <h6>Новинки</h6>
+    </button>    
+        <button routerLink="/products">
+            <img src="/assets/cart.png">
+            <h6>Всі товари</h6>
+        </button>    
+        <button routerLink="/products/Подарунки">
+            <img src="/assets/gift.png">
+            <h6>Подарунки</h6>
+        </button>
+    <button>
+        <img src="/assets/lamp.png">
+        <h6>Електроніка</h6>
+    </button>
+    <button routerLink="/products/Одяг">
+        <img src="/assets/dress.png">
+        <h6>Одяг</h6>
+    </button>
+    <button routerLink="/products/Обігрівачі">
+        <img src="/assets/house.png">
+        <h6>Обігрівачі/Плити</h6>
+    </button>
+</div>
 
 
 
@@ -78,6 +112,7 @@
                     [routerLink]="'/lot/' + item.id">
             </div>
         </mat-card-header>
+        <p>{{item.top}}</p>
         <mat-card-title style="text-align: center;">{{item.title}}</mat-card-title>
         <mat-card-subtitle style="text-align: center;">{{item.category}}</mat-card-subtitle>
         <!-- <mat-card-content style="text-align: center;">

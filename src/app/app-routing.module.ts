@@ -10,9 +10,10 @@ import { MastercardComponent } from './components/mastercard/mastercard.componen
 import { NewComponent } from './components/new/new.component';
 import { ProductsComponent } from './components/products/products.component';
 import { TermsComponent } from './components/terms/terms.component';
+import { TopComponent } from './components/top/top.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'products', pathMatch: 'full' },
+  { path: '', redirectTo: 'about-us', pathMatch: 'full' },
   { path: 'products', component: ProductsComponent },
   { path: 'products/:category', component: ProductsComponent },
   { path: 'new', component: NewComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'lot', component: LotComponent },
   { path: 'back', component: BackComponent },
+  { path: 'top', component: TopComponent },
   { path: 'delivery', component: DeliveryComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'garant', component: GarantComponent },
