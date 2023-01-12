@@ -75,7 +75,7 @@
         <img src="/assets/top.png">
         <h6>Топ продаж</h6>
     </button> 
-    <button routerLink="/new">
+    <button routerLink="/products/Одяг">
         <img src="/assets/star.png">
         <h6>Новинки</h6>
     </button>    
@@ -112,20 +112,24 @@
                     [routerLink]="'/lot/' + item.id">
             </div>
         </mat-card-header>
-        <p>{{item.top}}</p>
-        <mat-card-title style="text-align: center;">{{item.title}}</mat-card-title>
-        <mat-card-subtitle style="text-align: center;">{{item.category}}</mat-card-subtitle>
-        <!-- <mat-card-content style="text-align: center;">
-            {{item.short_description}}
-        </mat-card-content> -->
-        <strong>Ціна: {{item.price}} грн.</strong>
-        <mat-card-actions>
-            <button mat-raised-button color="accent" (click)="addToCart(item)">
-                Додати у кошик
-            </button>
+        
 
-        </mat-card-actions>
-    </mat-card>
+        <mat-card-title style="text-align: center;">{{item.title}}</mat-card-title>
+        <p>{{item.top}}</p>
+        <p>{{item.new}}</p>
+            <!-- <mat-card-subtitle style="text-align: center;">{{item.category}}</mat-card-subtitle> -->
+            <!-- <mat-card-content style="text-align: center;">
+                {{item.short_description}}
+            </mat-card-content> -->
+            <strong>Ціна: {{item.price}} грн.</strong>
+            <mat-card-actions>
+                <button mat-raised-button color="accent" (click)="addToCart(item)">
+                    Додати у кошик
+                </button>
+                
+            </mat-card-actions>
+        
+        </mat-card>
     <!-- <button mat-mini-fab color="accent" class="btn">
         <mat-icon>phone</mat-icon>
       </button> -->
