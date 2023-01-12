@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import data from '../../assets/i18n/myProdUa.json';
+import dataUa from '../../assets/i18n/myProdUa.json';
+import dataRu from '../../assets/i18n/myProdRu.json';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +13,7 @@ export class ApiService {
 
   getProduct() {
     return new Observable<any>(observe => {
-      observe.next(data)
+      observe.next(dataUa)
     })
 
   }
