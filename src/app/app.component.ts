@@ -33,7 +33,7 @@ export class AppComponent {
   }
   setLang(lang: 'ua' | 'ru'): void {
     this.translate.use(lang);
-    this.router.navigateByUrl(this.document.location.href.replace(/\/ru|ua\//, lang === 'ua' ? '/ru' : '/ua'));
+    this.router.navigateByUrl(this.document.location.pathname.replace(/\/ru|ua\//, lang === 'ua' ? '/ru' : '/ua'));
 
   }
 }
