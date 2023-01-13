@@ -62,7 +62,7 @@
 
 </div> -->
 <div class="head-image">
-    <img src="/assets/ps.jpg" alt="Podlivka" style="background-position: 0 0; 
+    <img src="/assets/ps.jpg" alt="Podlivka" style="background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100%; width: 100%; height: 30vh;">
 </div>
@@ -71,19 +71,19 @@
         <img src="/assets/cart.png">
         <h6>Всі товари</h6>
     </button> -->
-    <button routerLink="/top">
+    <button [routerLink]="'/' + lang + '/top'">
         <img src="/assets/top.png">
         <h6>Топ продаж</h6>
-    </button> 
-    <button routerLink="/products/Одяг">
+    </button>
+    <button [routerLink]="'/' + lang + '/products/Одяг'">
         <img src="/assets/star.png">
         <h6>Новинки</h6>
-    </button>    
-        <button routerLink="/products">
+    </button>
+        <button [routerLink]="'/' + lang + '/products'">
             <img src="/assets/cart.png">
             <h6>Всі товари</h6>
-        </button>    
-        <button routerLink="/products/Подарунки">
+        </button>
+        <button [routerLink]="'/' + lang + '/products/Подарунки'">
             <img src="/assets/gift.png">
             <h6>Подарунки</h6>
         </button>
@@ -91,11 +91,11 @@
         <img src="/assets/lamp.png">
         <h6>Електроніка</h6>
     </button>
-    <button routerLink="/products/Одяг">
+    <button [routerLink]="'/' + lang + '/products/Одяг'">
         <img src="/assets/dress.png">
         <h6>Одяг</h6>
     </button>
-    <button routerLink="/products/Обігрівачі">
+    <button [routerLink]="'/' + lang + '/products/Обігрівачі'">
         <img src="/assets/house.png">
         <h6>Обігрівачі/Плити</h6>
     </button>
@@ -109,10 +109,11 @@
         <mat-card-header>
             <div class="header-image">
                 <img mat-card-image [src]="getImage(item)" [alt]="item.title" [title]="item.title"
-                    [routerLink]="'/lot/' + item.id">
+                    [routerLink]="'/' + lang + '/lot/' + item.id">
+                    {{lang + '/lot/' + item.id}}
             </div>
         </mat-card-header>
-        
+
 
         <mat-card-title style="text-align: center;">{{item.title}}</mat-card-title>
         <p>{{item.top}}</p>
@@ -126,9 +127,9 @@
                 <button mat-raised-button color="accent" (click)="addToCart(item)">
                     Додати у кошик
                 </button>
-                
+
             </mat-card-actions>
-        
+
         </mat-card>
     <!-- <button mat-mini-fab color="accent" class="btn">
         <mat-icon>phone</mat-icon>

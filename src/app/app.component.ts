@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { CartapiService } from './services/cartapi.service';
 import { TranslateService } from '@ngx-translate/core';
-
+import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,20 +12,28 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'ecart';
   totalItemNumber: number = 0;
+  lang: string = 'ua';
   constructor(
     private cartApi: CartapiService,
-    public translate: TranslateService
+    private router: Router,
+    public translate: TranslateService,
+    @Inject(DOCUMENT) private document: any
   ) {
     translate.addLangs(['ru', 'ua']);
-    translate.setDefaultLang('ru');
-
-    // const browserLang: any = translate.getBrowserLang();
-    // translate.use(browserLang.match(/ru|ua/) ? browserLang : 'ru');
+    translate.setDefaultLang('ua');
+    console.log({ URL: this.document.location.href });
+    this.lang = new RegExp('\/ru\/').test(this.document.location.href) ? 'ru' : 'ua';
+    translate.use(this.lang);
   }
 
   ngOnInit(): void {
     this.cartApi.getProductData().subscribe(res => {
       this.totalItemNumber = res.length;
     })
+  }
+  setLang(lang: 'ua' | 'ru'): void {
+    this.translate.use(lang);
+    this.router.navigateByUrl(this.document.location.href.replace(/\/ru|ua\//, lang === 'ua' ? '/ru' : '/ua'));
+
   }
 }

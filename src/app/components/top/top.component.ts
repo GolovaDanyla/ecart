@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiService } from 'src/app/services/api.service';
 import { CartapiService } from 'src/app/services/cartapi.service';
 
@@ -13,19 +15,21 @@ export class TopComponent implements OnInit {
   productList: any;
   topId: string = '';
   totalItemNumber: number = 0;
-
+  lang: string = 'ua';
   constructor(
     private api: ApiService,
     private cartApi: CartapiService,
     private snackBar: MatSnackBar,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public translate: TranslateService,
+    @Inject(DOCUMENT) private document: any
     ) {
       this.route.params.subscribe(params => {
       console.log({ params });
       const top = params['top'];
       this.topId = top;
-
-      this.api.getProduct().subscribe(res => {
+      this.lang = new RegExp('\/ru\/').test(this.document.location.href) ? 'ru' : 'ua';
+      this.api.getProduct(this.lang).subscribe(res => {
         this.productList = res;
         if (this.topId) {
           this.productList = this.productList.filter((item: any) => {
@@ -39,7 +43,7 @@ export class TopComponent implements OnInit {
     }); }
 
   ngOnInit() {
-    
+
   }
   addToCart(item: any) {
     this.cartApi.addToCart(item);
@@ -51,7 +55,7 @@ export class TopComponent implements OnInit {
     }
     return item.image;
   }
-  
+
 
 
 }

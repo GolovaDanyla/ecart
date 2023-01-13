@@ -4,7 +4,7 @@
       <mat-card-header>
           <div class="header-image">
               <img mat-card-image [src]="getImage(item)" [alt]="item.title" [title]="item.title"
-                  [routerLink]="'/lot/' + item.id">
+                  [routerLink]="'/' + lang + '/lot/' + item.id">
           </div>
       </mat-card-header>
       <p>{{item.top}}</p>

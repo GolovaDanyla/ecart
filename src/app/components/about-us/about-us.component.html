@@ -9,7 +9,7 @@
       <div class="m-body">
         <div class="m-header">
           <div class="header-image"><img src="assets/girl1.jpg" style="width: 100%; height: 80vh;">
-            <button mat-raised-button color="accent" class="header-image-absolute" routerLink="/produts">Товари</button>
+            <button mat-raised-button color="accent" class="header-image-absolute" [routerLink]="'/' + lang + '/produts'">Товари {{'title' | translate}}</button>
           </div>
           <!-- <div class="m-header-block"> -->
           <!-- <div class="m-header-logo"><strong></strong></div>
@@ -21,7 +21,7 @@
           <!-- </div> -->
           <br>
           <br>
-          <h3 class="base__title">Наші <span>переваги</span></h3>
+          <h3 class="base__title">Наші переваги</h3>
           <div class="row">
             <div class="asset-item">
               <div class="asset-ico"><img src="assets/bk.png" style=" width: 80px; height: 80px;"></div>

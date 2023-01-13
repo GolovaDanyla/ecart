@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-us',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
-
-  constructor() { }
+  lang: string = 'ua';
+  constructor(public translation: TranslateService, @Inject(DOCUMENT) private document: any) {
+    this.lang = new RegExp('\/ru\/').test(this.document.location.href) ? 'ru' : 'ua';
+  }
 
   ngOnInit() {
   }

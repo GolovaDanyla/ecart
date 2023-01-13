@@ -9,8 +9,8 @@
     </button>
     <mat-menu #menu="matMenu">
       <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-        <mat-button-toggle value="ua">UA</mat-button-toggle>
-        <mat-button-toggle value="ru">RU</mat-button-toggle>
+        <mat-button-toggle value="ua" (click)="setLang('ua')">UA</mat-button-toggle>
+        <mat-button-toggle value="ru" (click)="setLang('ru')">RU</mat-button-toggle>
       </mat-button-toggle-group>
       <button mat-menu-item [matMenuTriggerFor]="products">
 
@@ -20,38 +20,38 @@
 
       </button>
       <mat-menu #products="matMenu">
-        <button mat-menu-item routerLink="/products">
+        <button mat-menu-item [routerLink]="'/' + lang + '/products'">
           Всі товари
           <mat-icon>category</mat-icon>
         </button>
-        <button mat-menu-item routerLink="/products/Електроніка">
+        <button mat-menu-item [routerLink]="'/' + lang + '/products/Електроніка'">
           Електроніка
           <mat-icon>wb_incandescent</mat-icon>
         </button>
-        <button mat-menu-item routerLink="/products/Одяг">
+        <button mat-menu-item [routerLink]="'/' + lang + '/products/Одяг'">
           Одяг
           <mat-icon>accessibility_new</mat-icon>
         </button>
-        <button mat-menu-item routerLink="/products/Подарунки">
+        <button mat-menu-item [routerLink]="'/' + lang + '/products/Подарунки'">
           Подарунки
           <mat-icon>card_giftcard</mat-icon>
         </button>
-        <button mat-menu-item routerLink="/products/Обігрівачі">
+        <button mat-menu-item [routerLink]="'/' + lang + '/products/Обігрівачі'">
           Обігрівачі\Плити
           <mat-icon>wb_sunny</mat-icon>
         </button>
       </mat-menu>
-      <button mat-menu-item routerLink="/top">
+      <button mat-menu-item [routerLink]="'/' + lang + '/top'">
 
         Топ продаж
         <mat-icon>attach_money</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/products/Одяг">
+      <button mat-menu-item [routerLink]="'/' + lang + '/products/Одяг'">
 
         Новинки
         <mat-icon>fiber_new</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/about-us">
+      <button mat-menu-item [routerLink]="'/' + lang + '/about-us'">
 
         Про нас
         <mat-icon>home</mat-icon>
@@ -59,26 +59,26 @@
       <div class="line">
         <img src="assets/line.png" alt="" style="width: 280px; height: 10px;">
       </div>
-      <button mat-menu-item routerLink="/back">
+      <button mat-menu-item [routerLink]="'/' + lang + '/back'">
         Умови повернення та обміну
         <mat-icon>cached</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/mastercard">
+      <button mat-menu-item [routerLink]="'/' + lang + '/mastercard'">
 
         Способи оплати
         <mat-icon>credit_card</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/delivery">
+      <button mat-menu-item [routerLink]="'/' + lang + '/delivery'">
 
         Умови доставки
         <mat-icon> departure_board</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/garant">
+      <button mat-menu-item [routerLink]="'/' + lang + '/garant'">
 
         Гарантії
         <mat-icon>assignment_turned_in</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/terms">
+      <button mat-menu-item [routerLink]="'/' + lang + '/terms'">
 
         Договір оферти
         <mat-icon>assignment_late</mat-icon>
@@ -97,7 +97,7 @@
 
     </mat-menu>
 
-    <strong style="font-size: 18px; color: black; cursor: pointer" routerLink="/products/Подарунки">Магазин "Podlivka"</strong>
+    <strong style="font-size: 18px; color: black; cursor: pointer" [routerLink]="'/' + lang + '/products/Подарунки'">Магазин "Podlivka"</strong>
 
     <!-- <div class="number">
 
@@ -114,7 +114,7 @@
 
 
 
-    <button routerLink="/cart" mat-mini-fab matTooltip="Accent" color="accent">
+    <button [routerLink]="'/' + lang + '/cart'" mat-mini-fab matTooltip="Accent" color="accent">
       <mat-icon>shopping_cart</mat-icon>
       <div>{{ totalItemNumber }}</div>
     </button>
@@ -133,11 +133,11 @@
 
     <h4><a href="tel:+380668420391">+38(066)-842-03-91</a></h4>
     <h4><a href="tel:+380500740311">+38(050)-074-03-11</a></h4>
-    <!-- <span routerLink="/back" style="cursor: pointer;">Умови повернення та обміну</span>
-    <span routerLink="/mastercard" style="cursor: pointer;">Способи оплати</span>
-    <span routerLink="/delivery" style="cursor: pointer;">Умови доставки</span>
-    <span routerLink="/terms" style="cursor: pointer;">Договір оферти</span>
-    <span routerLink="/garant" style="cursor: pointer;">Гарантії</span> -->
+    <!-- <spa [routerLink]="'/' + lang + '/back" style="cursor: pointer;">Умови повернення та обміну</spa'n>
+    <spa [routerLink]="'/' + lang + '/mastercard" style="cursor: pointer;">Способи оплати</spa'n>
+    <spa [routerLink]="'/' + lang + '/delivery" style="cursor: pointer;">Умови доставки</spa'n>
+    <spa [routerLink]="'/' + lang + '/terms" style="cursor: pointer;">Договір оферти</spa'n>
+    <span [routerLink]="'/' + lang + '/garant" style="cursor: pointer;">Гарантії</span> -'->
     <!-- <img src="/assets/logos/Meest_Corporation_logo.svg.png" >
     <img src="/assets/logos/Nova_Poshta_2022_logo.png" > -->
   </div>
