@@ -2,8 +2,8 @@
 
     <div class="example-form" style="display: flex; flex-direction: column;">
         <mat-form-field class="example-full-width">
-            <mat-label>Ваше Ім'я та Прізвище</mat-label>
-            <input type="text" [(ngModel)]="name" matInput placeholder="Ім'я та Прізвище">
+            <mat-label>{{"pib" | translate}}</mat-label>
+            <input type="text" [(ngModel)]="name" matInput>
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Телефон</mat-label>
@@ -11,19 +11,19 @@
             <input type="tel"  [(ngModel)]="phone" matInput placeholder="099-999-9999">
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <mat-label>Місто</mat-label>
-            <input type="text" [(ngModel)]="city" matInput placeholder="Місто">
+            <mat-label>{{"city" | translate}}</mat-label>
+            <input type="text" [(ngModel)]="city" matInput>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <mat-label>№ відділення</mat-label>
-            <input type="tel" [(ngModel)]="deliveryNumber" matInput placeholder="№ відділення">
+            <mat-label>{{"viddilenya" | translate}}</mat-label>
+            <input type="tel" [(ngModel)]="deliveryNumber" matInput>
         </mat-form-field>
         <mat-radio-group aria-label="Select an option" [(ngModel)]="deliveryCompany">
-            <mat-radio-button value="Нова пошта" [checked]="true">Нова пошта</mat-radio-button>
+            <mat-radio-button value="Нова пошта" [checked]="true">{{"novaP" | translate}}</mat-radio-button>
             <mat-radio-button value="MeestExpress">MeestExpress</mat-radio-button>
           </mat-radio-group>
         <br>
-        <button  mat-raised-button color="primary"  (click)="buy()">Купити зараз!</button>
+        <button  mat-raised-button color="primary"  (click)="buy()">{{"buyAll" | translate}}</button>
     </div>
 
 </div>

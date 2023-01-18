@@ -71,7 +71,7 @@
         <img src="/assets/cart.png">
         <h6>Всі товари</h6>
     </button> -->
-    <button [routerLink]="'/' + lang + '/top'">
+    <button [routerLink]="'/' + lang + '/products/Електроніка'">
         <img src="/assets/top.png">
         <h6>Топ продаж</h6>
     </button>
@@ -81,23 +81,23 @@
     </button>
         <button [routerLink]="'/' + lang + '/products'">
             <img src="/assets/cart.png">
-            <h6>Всі товари</h6>
+            <h6>{{"vse" | translate}}</h6>
         </button>
         <button [routerLink]="'/' + lang + '/products/Подарунки'">
             <img src="/assets/gift.png">
-            <h6>Подарунки</h6>
+            <h6>{{"podarki" | translate}}</h6>
         </button>
-    <button>
+    <button [routerLink]="'/' + lang + '/products/Електроніка'">
         <img src="/assets/lamp.png">
-        <h6>Електроніка</h6>
+        <h6>{{"electro" | translate}}</h6>
     </button>
     <button [routerLink]="'/' + lang + '/products/Одяг'">
         <img src="/assets/dress.png">
-        <h6>Одяг</h6>
+        <h6>{{"odyag" | translate}}</h6>
     </button>
     <button [routerLink]="'/' + lang + '/products/Обігрівачі'">
         <img src="/assets/house.png">
-        <h6>Обігрівачі/Плити</h6>
+        <h6>{{"obogrev" | translate}}</h6>
     </button>
 </div>
 
@@ -121,10 +121,10 @@
             <!-- <mat-card-content style="text-align: center;">
                 {{item.short_description}}
             </mat-card-content> -->
-            <strong>Ціна: {{item.price}} грн.</strong>
+            <strong>{{"price" | translate}}: {{item.price}} грн.</strong>
             <mat-card-actions>
                 <button mat-raised-button color="accent" (click)="addToCart(item)">
-                    Додати у кошик
+                    {{"addToCart" | translate}}
                 </button>
 
             </mat-card-actions>

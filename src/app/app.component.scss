@@ -4,9 +4,12 @@
   flex-direction: row;
   top: 0px;
   position: sticky !important;
-  z-index: 9999;
+  z-index: 999;
   // justify-content: space-between;
   background-color: transparent;
+}
+mat-menu{
+  z-index: 9999;
 }
 .tel{
  a{

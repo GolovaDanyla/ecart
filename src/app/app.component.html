@@ -16,30 +16,30 @@
       </mat-button-toggle-group>
       <button mat-menu-item [matMenuTriggerFor]="products">
 
-        Товари
+        {{"prod" | translate}}
 
         <mat-icon>category</mat-icon>
 
       </button>
       <mat-menu #products="matMenu">
         <button mat-menu-item [routerLink]="'/' + lang + '/products'">
-          Всі товари
+          {{"vse" | translate}}
           <mat-icon>category</mat-icon>
         </button>
         <button mat-menu-item [routerLink]="'/' + lang + '/products/Електроніка'">
-          Електроніка
+          {{"electro" | translate}}
           <mat-icon>wb_incandescent</mat-icon>
         </button>
         <button mat-menu-item [routerLink]="'/' + lang + '/products/Одяг'">
-          Одяг
+          {{"odyag" | translate}}
           <mat-icon>accessibility_new</mat-icon>
         </button>
         <button mat-menu-item [routerLink]="'/' + lang + '/products/Подарунки'">
-          Подарунки
+          {{"podarki" | translate}}
           <mat-icon>card_giftcard</mat-icon>
         </button>
         <button mat-menu-item [routerLink]="'/' + lang + '/products/Обігрівачі'">
-          Обігрівачі\Плити
+          {{"obogrev" | translate}}
           <mat-icon>wb_sunny</mat-icon>
         </button>
       </mat-menu>
@@ -62,27 +62,27 @@
         <img src="assets/line.png" alt="" style="width: 280px; height: 10px;">
       </div>
       <button mat-menu-item [routerLink]="'/' + lang + '/back'">
-        Умови повернення та обміну
+        {{"umovi" | translate}}
         <mat-icon>cached</mat-icon>
       </button>
       <button mat-menu-item [routerLink]="'/' + lang + '/mastercard'">
 
-        Способи оплати
+        {{"oplata" | translate}}
         <mat-icon>credit_card</mat-icon>
       </button>
       <button mat-menu-item [routerLink]="'/' + lang + '/delivery'">
 
-        Умови доставки
+        {{"dostavka" | translate}}
         <mat-icon> departure_board</mat-icon>
       </button>
       <button mat-menu-item [routerLink]="'/' + lang + '/garant'">
 
-        Гарантії
+        {{"gar" | translate}}
         <mat-icon>assignment_turned_in</mat-icon>
       </button>
       <button mat-menu-item [routerLink]="'/' + lang + '/terms'">
 
-        Договір оферти
+        {{"dogovorOf" | translate}}
         <mat-icon>assignment_late</mat-icon>
       </button>
       <div class="line">
@@ -90,6 +90,13 @@
       </div>
       <div class="tel">
         <a href ="tel:+380500740311">+38(050)-074-03-11</a>
+        
+      </div>
+      <div class="line">
+        <img src="assets/line.png" alt="" style="width: 280px; height: 10px;">
+      </div>
+      <div class="tel">
+        <a href ="tel:+380668420391">+38(066)-842-03-91</a>
       </div>
       <div class="line">
         <img src="assets/line.png" alt="" style="width: 280px; height: 10px;">

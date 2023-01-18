@@ -36,14 +36,14 @@
       <div class="btn-collection">
         <!-- <td colspan=""></td> -->
           <button  mat-raised-button color="accent" (click)="removeAllProduct()">
-            Очистити
+            {{"clear" | translate}}
           </button>
           <button  mat-raised-button color="accent" routerLink="/products">
-            Купити ще
+            {{"buyAlso" | translate}}
           </button>
-          <button  mat-raised-button color="primary" (click)="buyNow()">Придбати зараз</button>
+          <button  mat-raised-button color="primary" (click)="buyNow()">{{"buyNow" | translate}}</button>
           <!-- <app-buy></app-buy> -->
-          <strong>Всього: ₴{{allProducts}}</strong>
+          <strong>{{"total" | translate}}: ₴{{allProducts}}</strong>
 
         </div>
     </div>
@@ -53,12 +53,12 @@
 <div class="emptyCart">
 
   <div *ngIf="products.length == 0" class="empty">
-    <h4>Мій кошик</h4>
+    <h4>{{"myCart" | translate}}</h4>
     <img src="/assets/empty.png" alt>
-    <h5>Ваш кошик пустий</h5>
+    <h5>{{"emptyCart" | translate}}</h5>
     <!-- <h6>Добавити зараз</h6> -->
     <button mat-raised-button color="primary" routerLink="/products">
-      Купити зараз
+      {{"BUY" | translate}}
     </button>
   </div>
 </div>
