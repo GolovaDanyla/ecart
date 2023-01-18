@@ -10,7 +10,8 @@
     "dev:ssr": "ng run ecart:serve-ssr",
     "serve:ssr": "node dist/ecart/server/main.js",
     "build:ssr": "ng build && ng run ecart:server",
-    "prerender": "ng run ecart:prerender"
+    "prerender": "ng run ecart:prerender",
+    "dev": "npm run build:ssr && npm run serve:ssr"
   },
   "private": true,
   "dependencies": {
