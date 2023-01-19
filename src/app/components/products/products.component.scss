@@ -135,6 +135,11 @@
 
 
 @media all and (max-width: 540px) {
+    .first{
+        h6{
+            color: black;
+        }
+    }
     .example-card {
         display: flex;
         flex-direction: column;
