@@ -42,7 +42,7 @@ onActivate(event: any) {
   let scrollToTop = window.setInterval(() => {
       let pos = window.pageYOffset;
       if (pos > 0) {
-          window.scrollTo(0, pos - 20); // how far to scroll on each step
+          window.scrollTo(0, pos - 80); // how far to scroll on each step
       } else {
           window.clearInterval(scrollToTop);
       }
@@ -57,7 +57,7 @@ onActivate(event: any) {
   setLang(lang: 'ua' | 'ru'): void {
     this.translate.use(lang);
 
-    this.router.navigateByUrl(this.document.location.pathname.replace(/\/(ru|ua)\//,  this.document.location.href.includes('/ua/') ? '/ru/' : '/ua/'));
+    this.router.navigateByUrl(this.document.location.pathname.replace(/\/(ru|ua)\//,  this.document.location.href.includes('/ru/') ? '/ua/' : '/ru/'));
 
   }
 }
