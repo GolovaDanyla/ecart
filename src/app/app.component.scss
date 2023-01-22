@@ -37,7 +37,16 @@ mat-menu{
     text-decoration: none;
   }
 }
-
+.meest{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  img{
+    width: 100px;
+    height: 50px;
+  }
+}
 .head {
   display: flex;
   flex-direction: column;
