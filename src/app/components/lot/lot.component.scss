@@ -37,7 +37,19 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
+mat-card-actions{
+  justify-content: center;
+}
+.meest{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  img{
+    width: 100px;
+    height: 70px;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;

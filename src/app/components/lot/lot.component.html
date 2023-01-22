@@ -32,20 +32,28 @@ class="container">
             <div style="white-space: break-spaces; text-align: justify;">{{ productItem.description }}</div>
 
           </pre>
-          <h1 >{{ productItem.total }} грн.</h1>
+          <h1 style="text-align: center;">{{ productItem.total }} грн.</h1>
         </div>
       </div>
-
-
+      
+      
 
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="accent"
-      (click)="addToCart(productItem)">
+      (click)="addToCart(productItem)" style="align-items: center;">
       {{"addToCart" | translate}}
     </button>
   </mat-card-actions>
+  <br>
+  <br>
+  <div class="meest">
+    <img src="/assets/logos/Meest_Corporation_logo.svg.png" >
+    <img src="/assets/logos/Nova_Poshta_2022_logo.png" >
+  
+  </div>
 </mat-card-content>
+
 </mat-card>
 
 </div>
