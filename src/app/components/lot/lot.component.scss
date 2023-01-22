@@ -5,7 +5,9 @@
 //   color: white;
 //   padding-top: 13px;
 // }
-
+// :host{
+//   overflow-y: 0;
+// }
 
 .number {
   display: flex;
@@ -57,6 +59,8 @@ mat-card-actions{
   justify-content: center;
   max-width: 800px;
   margin: auto;
+  // overflow-y: scroll;
+  // overflow-x: auto;
   >*{
     flex:3;
   }
